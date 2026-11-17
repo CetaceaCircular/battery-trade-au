@@ -1,0 +1,662 @@
+{
+ "years": [
+  2019,
+  2025
+ ],
+ "pom_pool_gwh_by_year": {
+  "2019": 0.55,
+  "2020": 1.18,
+  "2021": 2.82,
+  "2022": 6.33,
+  "2023": 9.71,
+  "2024": 15.07,
+  "2025": 38.05
+ },
+ "pom_pool_cum_gwh": 73.71,
+ "lane_850760_gwh_latest": 31.21,
+ "basket_au_cif_usd_latest": 10170762932.67,
+ "anchors": {
+  "pom_pool_cum_gwh_target": 70.9,
+  "lane_850760_gwh_target": 31.0,
+  "tolerance": 0.1
+ },
+ "n_flags": 106,
+ "flags": [
+  {
+   "year": 2019,
+   "hs": "842710",
+   "kind": "mirror-ratio out of band",
+   "detail": "ratio 0.54 outside 0.8-2.0"
+  },
+  {
+   "year": 2020,
+   "hs": "842710",
+   "kind": "mirror-ratio out of band",
+   "detail": "ratio 0.60 outside 0.8-2.0"
+  },
+  {
+   "year": 2021,
+   "hs": "842710",
+   "kind": "mirror-ratio out of band",
+   "detail": "ratio 0.67 outside 0.8-2.0"
+  },
+  {
+   "year": 2021,
+   "hs": "842710",
+   "kind": ">50% value move",
+   "detail": "value 25,123,472 -> 53,063,627 (+111%)"
+  },
+  {
+   "year": 2021,
+   "hs": "842710",
+   "kind": ">50% tonnage move",
+   "detail": "tonnage 8,115 -> 15,617 (+92%)"
+  },
+  {
+   "year": 2022,
+   "hs": "842710",
+   "kind": "mirror-ratio out of band",
+   "detail": "ratio 0.64 outside 0.8-2.0"
+  },
+  {
+   "year": 2022,
+   "hs": "842710",
+   "kind": ">50% value move",
+   "detail": "value 53,063,627 -> 83,049,984 (+57%)"
+  },
+  {
+   "year": 2022,
+   "hs": "842710",
+   "kind": ">50% tonnage move",
+   "detail": "tonnage 15,617 -> 24,733 (+58%)"
+  },
+  {
+   "year": 2023,
+   "hs": "842710",
+   "kind": "mirror-ratio out of band",
+   "detail": "ratio 0.63 outside 0.8-2.0"
+  },
+  {
+   "year": 2024,
+   "hs": "842710",
+   "kind": "mirror-ratio out of band",
+   "detail": "ratio 0.73 outside 0.8-2.0"
+  },
+  {
+   "year": 2025,
+   "hs": "842710",
+   "kind": "mirror-ratio out of band",
+   "detail": "ratio 0.79 outside 0.8-2.0"
+  },
+  {
+   "year": 2020,
+   "hs": "850440",
+   "kind": ">50% tonnage move",
+   "detail": "tonnage 5,989 -> 16,989 (+184%)"
+  },
+  {
+   "year": 2020,
+   "hs": "850610",
+   "kind": ">50% tonnage move",
+   "detail": "tonnage 3,008 -> 6,857 (+128%)"
+  },
+  {
+   "year": 2019,
+   "hs": "850650",
+   "kind": "mirror-ratio out of band",
+   "detail": "ratio 3.76 outside 0.8-2.0"
+  },
+  {
+   "year": 2020,
+   "hs": "850650",
+   "kind": "mirror-ratio out of band",
+   "detail": "ratio 3.87 outside 0.8-2.0"
+  },
+  {
+   "year": 2020,
+   "hs": "850650",
+   "kind": ">50% value move",
+   "detail": "value 7,507,179 -> 11,490,280 (+53%)"
+  },
+  {
+   "year": 2021,
+   "hs": "850650",
+   "kind": "mirror-ratio out of band",
+   "detail": "ratio 2.54 outside 0.8-2.0"
+  },
+  {
+   "year": 2022,
+   "hs": "850650",
+   "kind": "mirror-ratio out of band",
+   "detail": "ratio 2.96 outside 0.8-2.0"
+  },
+  {
+   "year": 2023,
+   "hs": "850650",
+   "kind": "mirror-ratio out of band",
+   "detail": "ratio 3.81 outside 0.8-2.0"
+  },
+  {
+   "year": 2024,
+   "hs": "850650",
+   "kind": "mirror-ratio out of band",
+   "detail": "ratio 3.09 outside 0.8-2.0"
+  },
+  {
+   "year": 2025,
+   "hs": "850650",
+   "kind": "mirror-ratio out of band",
+   "detail": "ratio 3.67 outside 0.8-2.0"
+  },
+  {
+   "year": 2022,
+   "hs": "850750",
+   "kind": ">50% tonnage move",
+   "detail": "tonnage 104 -> 262 (+153%)"
+  },
+  {
+   "year": 2020,
+   "hs": "850760",
+   "kind": ">50% tonnage move",
+   "detail": "tonnage 2,184 -> 6,558 (+200%)"
+  },
+  {
+   "year": 2021,
+   "hs": "850760",
+   "kind": ">50% value move",
+   "detail": "value 192,317,131 -> 318,785,172 (+66%)"
+  },
+  {
+   "year": 2021,
+   "hs": "850760",
+   "kind": ">50% tonnage move",
+   "detail": "tonnage 6,558 -> 10,876 (+66%)"
+  },
+  {
+   "year": 2022,
+   "hs": "850760",
+   "kind": ">50% value move",
+   "detail": "value 318,785,172 -> 642,502,896 (+102%)"
+  },
+  {
+   "year": 2022,
+   "hs": "850760",
+   "kind": ">50% tonnage move",
+   "detail": "tonnage 10,876 -> 27,214 (+150%)"
+  },
+  {
+   "year": 2024,
+   "hs": "850760",
+   "kind": ">50% value move",
+   "detail": "value 829,267,082 -> 1,655,860,875 (+100%)"
+  },
+  {
+   "year": 2024,
+   "hs": "850760",
+   "kind": ">50% tonnage move",
+   "detail": "tonnage 31,036 -> 82,657 (+166%)"
+  },
+  {
+   "year": 2025,
+   "hs": "850760",
+   "kind": ">50% value move",
+   "detail": "value 1,655,860,875 -> 4,082,039,987 (+147%)"
+  },
+  {
+   "year": 2025,
+   "hs": "850760",
+   "kind": ">50% tonnage move",
+   "detail": "tonnage 82,657 -> 249,640 (+202%)"
+  },
+  {
+   "year": 2022,
+   "hs": "850780",
+   "kind": "mirror-ratio break",
+   "detail": "45.25 -> 1.62 y/y"
+  },
+  {
+   "year": 2022,
+   "hs": "850780",
+   "kind": ">50% value move",
+   "detail": "value 3,655,534 -> 5,695,723 (+56%)"
+  },
+  {
+   "year": 2022,
+   "hs": "850780",
+   "kind": ">50% tonnage move",
+   "detail": "tonnage 7 -> 413 (+5748%)"
+  },
+  {
+   "year": 2023,
+   "hs": "850780",
+   "kind": ">50% value move",
+   "detail": "value 5,695,723 -> 9,776,704 (+72%)"
+  },
+  {
+   "year": 2025,
+   "hs": "850780",
+   "kind": "mirror-ratio out of band",
+   "detail": "ratio 37.25 outside 0.8-2.0"
+  },
+  {
+   "year": 2025,
+   "hs": "850780",
+   "kind": ">50% value move",
+   "detail": "value 3,265,711 -> 7,634,929 (+134%)"
+  },
+  {
+   "year": 2025,
+   "hs": "853710",
+   "kind": ">50% tonnage move",
+   "detail": "tonnage 5,775 -> 9,171 (+59%)"
+  },
+  {
+   "year": 2023,
+   "hs": "870121",
+   "kind": "mirror-ratio break",
+   "detail": "0.40 -> 1.32 y/y"
+  },
+  {
+   "year": 2023,
+   "hs": "870121",
+   "kind": ">50% value move",
+   "detail": "value 1,012,718 -> 11,577,076 (+1043%)"
+  },
+  {
+   "year": 2023,
+   "hs": "870121",
+   "kind": ">50% tonnage move",
+   "detail": "tonnage 336 -> 1,180 (+251%)"
+  },
+  {
+   "year": 2024,
+   "hs": "870121",
+   "kind": ">50% value move",
+   "detail": "value 11,577,076 -> 19,974,134 (+73%)"
+  },
+  {
+   "year": 2024,
+   "hs": "870121",
+   "kind": ">50% tonnage move",
+   "detail": "tonnage 1,180 -> 2,048 (+74%)"
+  },
+  {
+   "year": 2021,
+   "hs": "870240",
+   "kind": "mirror-ratio out of band",
+   "detail": "ratio 0.75 outside 0.8-2.0"
+  },
+  {
+   "year": 2022,
+   "hs": "870240",
+   "kind": "mirror-ratio out of band",
+   "detail": "ratio 0.72 outside 0.8-2.0"
+  },
+  {
+   "year": 2022,
+   "hs": "870240",
+   "kind": ">50% value move",
+   "detail": "value 8,718,968 -> 13,907,848 (+60%)"
+  },
+  {
+   "year": 2022,
+   "hs": "870240",
+   "kind": ">50% tonnage move",
+   "detail": "tonnage 466 -> 809 (+74%)"
+  },
+  {
+   "year": 2024,
+   "hs": "870240",
+   "kind": ">50% value move",
+   "detail": "value 16,251,854 -> 35,281,699 (+117%)"
+  },
+  {
+   "year": 2024,
+   "hs": "870240",
+   "kind": ">50% tonnage move",
+   "detail": "tonnage 674 -> 1,580 (+134%)"
+  },
+  {
+   "year": 2025,
+   "hs": "870240",
+   "kind": ">50% value move",
+   "detail": "value 35,281,699 -> 56,476,338 (+60%)"
+  },
+  {
+   "year": 2022,
+   "hs": "870340",
+   "kind": "mirror-ratio break",
+   "detail": "0.41 -> 0.94 y/y"
+  },
+  {
+   "year": 2022,
+   "hs": "870340",
+   "kind": ">50% value move",
+   "detail": "value 14,075 -> 74,703,356 (+530647%)"
+  },
+  {
+   "year": 2022,
+   "hs": "870340",
+   "kind": ">50% tonnage move",
+   "detail": "tonnage 3 -> 7,100 (+206289%)"
+  },
+  {
+   "year": 2023,
+   "hs": "870340",
+   "kind": ">50% value move",
+   "detail": "value 74,703,356 -> 180,639,506 (+142%)"
+  },
+  {
+   "year": 2023,
+   "hs": "870340",
+   "kind": ">50% tonnage move",
+   "detail": "tonnage 7,100 -> 16,233 (+129%)"
+  },
+  {
+   "year": 2024,
+   "hs": "870340",
+   "kind": ">50% value move",
+   "detail": "value 180,639,506 -> 331,080,638 (+83%)"
+  },
+  {
+   "year": 2020,
+   "hs": "870360",
+   "kind": ">50% tonnage move",
+   "detail": "tonnage 183 -> 295 (+62%)"
+  },
+  {
+   "year": 2021,
+   "hs": "870360",
+   "kind": "mirror-ratio out of band",
+   "detail": "ratio 0.22 outside 0.8-2.0"
+  },
+  {
+   "year": 2021,
+   "hs": "870360",
+   "kind": ">50% tonnage move",
+   "detail": "tonnage 295 -> 2,769 (+838%)"
+  },
+  {
+   "year": 2022,
+   "hs": "870360",
+   "kind": "mirror-ratio out of band",
+   "detail": "ratio 0.42 outside 0.8-2.0"
+  },
+  {
+   "year": 2022,
+   "hs": "870360",
+   "kind": "mirror-ratio break",
+   "detail": "0.22 -> 0.42 y/y"
+  },
+  {
+   "year": 2022,
+   "hs": "870360",
+   "kind": ">50% value move",
+   "detail": "value 9,459,341 -> 43,557,656 (+360%)"
+  },
+  {
+   "year": 2022,
+   "hs": "870360",
+   "kind": ">50% tonnage move",
+   "detail": "tonnage 2,769 -> 7,405 (+167%)"
+  },
+  {
+   "year": 2023,
+   "hs": "870360",
+   "kind": "mirror-ratio break",
+   "detail": "0.42 -> 0.91 y/y"
+  },
+  {
+   "year": 2023,
+   "hs": "870360",
+   "kind": ">50% tonnage move",
+   "detail": "tonnage 7,405 -> 3,692 (-50%)"
+  },
+  {
+   "year": 2024,
+   "hs": "870360",
+   "kind": ">50% value move",
+   "detail": "value 51,582,369 -> 187,018,117 (+263%)"
+  },
+  {
+   "year": 2024,
+   "hs": "870360",
+   "kind": ">50% tonnage move",
+   "detail": "tonnage 3,692 -> 16,257 (+340%)"
+  },
+  {
+   "year": 2025,
+   "hs": "870360",
+   "kind": ">50% value move",
+   "detail": "value 187,018,117 -> 588,980,408 (+215%)"
+  },
+  {
+   "year": 2025,
+   "hs": "870360",
+   "kind": ">50% tonnage move",
+   "detail": "tonnage 16,257 -> 63,896 (+293%)"
+  },
+  {
+   "year": 2020,
+   "hs": "870380",
+   "kind": "mirror-ratio out of band",
+   "detail": "ratio 0.69 outside 0.8-2.0"
+  },
+  {
+   "year": 2020,
+   "hs": "870380",
+   "kind": "mirror-ratio break",
+   "detail": "0.17 -> 0.69 y/y"
+  },
+  {
+   "year": 2020,
+   "hs": "870380",
+   "kind": ">50% value move",
+   "detail": "value 185,659 -> 7,126,303 (+3738%)"
+  },
+  {
+   "year": 2020,
+   "hs": "870380",
+   "kind": ">50% tonnage move",
+   "detail": "tonnage 121 -> 711 (+488%)"
+  },
+  {
+   "year": 2021,
+   "hs": "870380",
+   "kind": "mirror-ratio break",
+   "detail": "0.69 -> 1.31 y/y"
+  },
+  {
+   "year": 2021,
+   "hs": "870380",
+   "kind": ">50% value move",
+   "detail": "value 7,126,303 -> 536,065,960 (+7422%)"
+  },
+  {
+   "year": 2021,
+   "hs": "870380",
+   "kind": ">50% tonnage move",
+   "detail": "tonnage 711 -> 25,144 (+3437%)"
+  },
+  {
+   "year": 2022,
+   "hs": "870380",
+   "kind": ">50% value move",
+   "detail": "value 536,065,960 -> 1,209,783,036 (+126%)"
+  },
+  {
+   "year": 2022,
+   "hs": "870380",
+   "kind": ">50% tonnage move",
+   "detail": "tonnage 25,144 -> 66,983 (+166%)"
+  },
+  {
+   "year": 2023,
+   "hs": "870380",
+   "kind": ">50% value move",
+   "detail": "value 1,209,783,036 -> 2,711,116,907 (+124%)"
+  },
+  {
+   "year": 2023,
+   "hs": "870380",
+   "kind": ">50% tonnage move",
+   "detail": "tonnage 66,983 -> 161,499 (+141%)"
+  },
+  {
+   "year": 2021,
+   "hs": "870410",
+   "kind": "mining-truck arrival",
+   "detail": "870410 AU CIF US$60.1M (133 units) \u2014 review propulsion split"
+  },
+  {
+   "year": 2021,
+   "hs": "870410",
+   "kind": ">50% value move",
+   "detail": "value 1,502,472 -> 60,088,205 (+3899%)"
+  },
+  {
+   "year": 2021,
+   "hs": "870410",
+   "kind": ">50% tonnage move",
+   "detail": "tonnage 187 -> 3,659 (+1861%)"
+  },
+  {
+   "year": 2023,
+   "hs": "870410",
+   "kind": ">50% value move",
+   "detail": "value 313,117 -> 9,684,344 (+2993%)"
+  },
+  {
+   "year": 2023,
+   "hs": "870410",
+   "kind": ">50% tonnage move",
+   "detail": "tonnage 34 -> 1,126 (+3166%)"
+  },
+  {
+   "year": 2024,
+   "hs": "870451",
+   "kind": "mirror-ratio out of band",
+   "detail": "ratio 0.38 outside 0.8-2.0"
+  },
+  {
+   "year": 2024,
+   "hs": "870451",
+   "kind": "mirror-ratio break",
+   "detail": "0.81 -> 0.38 y/y"
+  },
+  {
+   "year": 2024,
+   "hs": "870451",
+   "kind": ">50% value move",
+   "detail": "value 139,135 -> 21,000,958 (+14994%)"
+  },
+  {
+   "year": 2024,
+   "hs": "870451",
+   "kind": ">50% tonnage move",
+   "detail": "tonnage 15 -> 5,864 (+38151%)"
+  },
+  {
+   "year": 2025,
+   "hs": "870451",
+   "kind": "mirror-ratio break",
+   "detail": "0.38 -> 1.18 y/y"
+  },
+  {
+   "year": 2025,
+   "hs": "870451",
+   "kind": ">50% value move",
+   "detail": "value 21,000,958 -> 652,848,433 (+3009%)"
+  },
+  {
+   "year": 2025,
+   "hs": "870451",
+   "kind": ">50% tonnage move",
+   "detail": "tonnage 5,864 -> 62,133 (+960%)"
+  },
+  {
+   "year": 2022,
+   "hs": "870460",
+   "kind": "mirror-ratio out of band",
+   "detail": "ratio 2.21 outside 0.8-2.0"
+  },
+  {
+   "year": 2023,
+   "hs": "870460",
+   "kind": "mirror-ratio break",
+   "detail": "2.21 -> 1.05 y/y"
+  },
+  {
+   "year": 2023,
+   "hs": "870460",
+   "kind": ">50% value move",
+   "detail": "value 7,547,097 -> 22,511,217 (+198%)"
+  },
+  {
+   "year": 2023,
+   "hs": "870460",
+   "kind": ">50% tonnage move",
+   "detail": "tonnage 240 -> 1,427 (+495%)"
+  },
+  {
+   "year": 2024,
+   "hs": "870460",
+   "kind": "mirror-ratio out of band",
+   "detail": "ratio 2.00 outside 0.8-2.0"
+  },
+  {
+   "year": 2024,
+   "hs": "870460",
+   "kind": "mirror-ratio break",
+   "detail": "1.05 -> 2.00 y/y"
+  },
+  {
+   "year": 2025,
+   "hs": "870460",
+   "kind": "mirror-ratio out of band",
+   "detail": "ratio 2.61 outside 0.8-2.0"
+  },
+  {
+   "year": 2022,
+   "hs": "870911",
+   "kind": ">50% tonnage move",
+   "detail": "tonnage 169 -> 389 (+130%)"
+  },
+  {
+   "year": 2025,
+   "hs": "870911",
+   "kind": ">50% tonnage move",
+   "detail": "tonnage 442 -> 707 (+60%)"
+  },
+  {
+   "year": 2020,
+   "hs": "871160",
+   "kind": ">50% value move",
+   "detail": "value 42,687,687 -> 72,362,975 (+70%)"
+  },
+  {
+   "year": 2020,
+   "hs": "871160",
+   "kind": ">50% tonnage move",
+   "detail": "tonnage 2,604 -> 4,237 (+63%)"
+  },
+  {
+   "year": 2021,
+   "hs": "871160",
+   "kind": ">50% value move",
+   "detail": "value 72,362,975 -> 141,505,810 (+96%)"
+  },
+  {
+   "year": 2021,
+   "hs": "871160",
+   "kind": ">50% tonnage move",
+   "detail": "tonnage 4,237 -> 7,095 (+67%)"
+  },
+  {
+   "year": 2025,
+   "hs": "850760+850440+853710",
+   "kind": "co-import signature",
+   "detail": "packs/inverters/cabinets co-surge (850760 +202%, 850440 +35%, 853710 +59%) \u2014 storage/swap indicator"
+  }
+ ]
+}
