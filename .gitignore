@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.env
+*.key
+.DS_Store
+# PNGs are local review copies; the repo tracks SVG (text-diffable, web-native)
+charts/*.png
+# transient fetch output; lane_year.csv and the aggregate tables are the committed layer
+data/processed/trade_long.csv

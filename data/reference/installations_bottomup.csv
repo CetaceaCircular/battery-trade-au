@@ -1,0 +1,4 @@
+year,segment,units,kwh_per_unit,hs,source
+2025,passenger-ev,103300,60.0,870380,"EV Council, State of EVs (BEVs sold in Australia 2025: 103,300)"
+2025,passenger-phev,53484,18.0,870360+870370,"EV Council, State of EVs (PHEVs sold in Australia 2025: 53,484)"
+2025,mixed-large-format,183245,10.0,,"Clean Energy Regulator CHBP registrations H2-2025 (183,245 home batteries; half-year, partial coverage of the 850760 lane)"
