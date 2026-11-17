@@ -20,7 +20,7 @@ this repository quantifies, from public data only.
 | 2 | Inflow went **0.6 → 38.1 GWh/yr** over the period; the pool now roughly **doubles every ~2 years** | `pom_pool.csv` |
 | 3 | **2025 alone: ~31.2 GWh / 249.6 kt** of lithium-ion packs (HS 850760) — 82% of the year's pool | `lane_year.csv` |
 | 4 | The 2025 basket cost Australia **US$10.2B CIF** (China-reported FOB: US$8.8B) | `lane_year.csv` |
-| 5 | Registered installations explain only a fraction of 2025 inflow — **the unregistered surplus is tens of GWh and compounding** | `surplus.csv` |
+| 5 | Registers (EVC vehicles, CER home batteries 4.6 GWh, CEC utility-scale 5.1 GWh) account for **~9.7 GWh of 2025's 38.1 GWh inflow** — the **~21.5 GWh residual is unallocated**: C&I, channel inventory, portable packs, unregistered | `surplus.csv` |
 | 6 | The **storage/swap co-import signature fired in 2025**: packs +202%, inverters/PCS +35%, control cabinets +59% (tonnage, y/y) | `flags.csv` |
 | 7 | Mirror ratios are lane-specific diagnostics: lead-acid runs **1.5–1.9×**, Li-ion packs ~1.0–1.2×, e-bikes ~0.9–1.0× | `mirror_ratios.csv` |
 | 8 | **Mining-truck tripwire (870410)**: one material arrival event on record — 2021, US$60M / 133 units (propulsion unsplit; under watch) | `flags.csv` |
@@ -37,7 +37,7 @@ this repository quantifies, from public data only.
 
 ![Storage/swap co-import signature](charts/coimport_signature.svg)
 
-![Trade inflow vs registered installations](charts/unregistered_surplus.svg)
+![Trade inflow vs registered installations](charts/unallocated_inflow.svg)
 
 ---
 
@@ -115,8 +115,9 @@ docs/method.md             # full methodology + source register
   Australia (36), flows X/M, HS codes per `config/hs_lanes.yml`. Retrieved per
   the commit date of `data/raw/`.
 - Reference overlay (validation only, `data/reference/`): EV Council *State of
-  EVs* (2025 BEV/PHEV sales); Clean Energy Regulator CHBP registrations
-  (H2-2025 home batteries). See `docs/method.md` §5.
+  EVs* (2025 BEV/PHEV sales); Clean Energy Regulator *Quarterly Carbon Market
+  Report* Q4 2025 (CHBP-validated home batteries); Clean Energy Council *Clean
+  Energy Australia 2026* (utility-scale commissions). See `docs/method.md` §5.
 - Calibration anchors recorded from the verified 2026-11 analysis cycle are in
   `config/hs_lanes.yml → anchors` and are **gate targets, not model inputs**.
 

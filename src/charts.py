@@ -160,15 +160,22 @@ def chart_surplus():
     ax.bar([i - w / 2 for i in x], s.trade_inflow_gwh, width=w, color=P["navy"],
            label="Trade-derived inflow", zorder=3)
     ax.bar([i + w / 2 for i in x], s.reference_gwh, width=w, color=P["orange"],
-           label="Registered installations (reference)", zorder=3)
+           label="Registered installations (EVC · CER · CEC)", zorder=3)
+    for i, r in enumerate(s.itertuples()):
+        ax.text(i - w / 2, r.trade_inflow_gwh + 0.4, f"{r.trade_inflow_gwh:,.1f}",
+                ha="center", fontsize=8, color=P["navy"])
+        ax.text(i + w / 2, r.reference_gwh + 0.4, f"{r.reference_gwh:,.1f}",
+                ha="center", fontsize=8, color=P["orange"])
     ax.set_xticks(list(x))
     ax.set_xticklabels(
-        [f"{r.segment}\n{r.year}" if pd.isna(r.hs) else f"{r.hs} · {r.segment}\n{r.year}"
+        [f"{r.segment}\n{r.year}" if (pd.isna(r.hs) or not r.hs)
+         else f"{r.hs} · {r.segment}\n{r.year}"
          for r in s.itertuples()], fontsize=8)
-    style(ax, "Trade inflow vs registered installations", "Unregistered surplus")
+    style(ax, "Trade inflow vs registered installations",
+          "Unallocated inflow · residual = C&I + channel stock + portable + unregistered")
     ax.set_ylabel("GWh", color=P["steel"], fontsize=9)
     ax.legend(fontsize=8.5, frameon=False)
-    save(fig, "unregistered_surplus")
+    save(fig, "unallocated_inflow")
 
 
 def main() -> None:

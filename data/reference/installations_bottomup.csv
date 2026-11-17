@@ -1,4 +1,5 @@
-year,segment,units,kwh_per_unit,hs,source
-2025,passenger-ev,103300,60.0,870380,"EV Council, State of EVs (BEVs sold in Australia 2025: 103,300)"
-2025,passenger-phev,53484,18.0,870360+870370,"EV Council, State of EVs (PHEVs sold in Australia 2025: 53,484)"
-2025,mixed-large-format,183245,10.0,,"Clean Energy Regulator CHBP registrations H2-2025 (183,245 home batteries; half-year, partial coverage of the 850760 lane)"
+year,segment,units,kwh_per_unit,gwh,hs,source
+2025,passenger-ev,103300,60.0,,870380,"EV Council, State of EVs (BEVs sold in Australia 2025: 103,300)"
+2025,passenger-phev,53484,18.0,,870360+870370,"EV Council, State of EVs (PHEVs sold in Australia 2025: 53,484)"
+2025,mixed-large-format,193000,,4.6,,"Clean Energy Regulator, Quarterly Carbon Market Report Q4 2025 (Mar 2026): >193,000 CHBP-validated home batteries installed 2025, 4.6 GWh; 12-month STC creation window means the final figure will rise"
+2025,mixed-large-format,,,5.1,,"Clean Energy Council, Clean Energy Australia 2026 (May 2026): 2.0 GW / 5.1 GWh utility-scale batteries commissioned 2025 (12 projects, NEM + SWIS), +233% y/y"

@@ -149,24 +149,35 @@ def main() -> None:
     flags_df.to_csv(DATA_PROC / "flags.csv", index=False)
 
     # ---- Surplus vs bottom-up reference layer (validation overlay) ----------
+    # Multiple reference rows may share (year, segment) — e.g. home storage +
+    # utility-scale both sit inside the 850760 lane. They are summed into one
+    # registered total; the residual is UNALLOCATED inflow (C&I, channel
+    # inventory, portable packs, unregistered product), not an error term.
     surplus_rows = []
     ref_path = DATA_REF / "installations_bottomup.csv"
     if ref_path.exists():
         ref = pd.read_csv(ref_path, dtype={"hs": str})
-        for _, r in ref.iterrows():
-            seg = ly[(ly.year == r.year) & (ly.segment == r.segment)]
-            if not seg.empty:
-                trade_gwh = float(seg.gwh.sum())
-                ref_gwh = float(r.units) * float(r.kwh_per_unit) / 1e6
-                surplus_rows.append({
-                    "year": int(r.year),
-                    "hs": str(r.hs) if pd.notna(r.hs) else "",
-                    "segment": r.segment,
-                    "trade_inflow_gwh": round(trade_gwh, 3),
-                    "reference_gwh": round(ref_gwh, 3),
-                    "surplus_gwh": round(trade_gwh - ref_gwh, 3),
-                    "source": r.source,
-                })
+        for (yr, segname), grp in ref.groupby(["year", "segment"]):
+            seg = ly[(ly.year == yr) & (ly.segment == segname)]
+            if seg.empty:
+                continue
+            trade_gwh = float(seg.gwh.sum())
+            ref_gwh = 0.0
+            for _, r in grp.iterrows():
+                if "gwh" in grp.columns and pd.notna(r.get("gwh")):
+                    ref_gwh += float(r["gwh"])
+                else:
+                    ref_gwh += float(r.units) * float(r.kwh_per_unit) / 1e6
+            hs_vals = sorted({str(h) for h in grp.hs if pd.notna(h)})
+            surplus_rows.append({
+                "year": int(yr),
+                "hs": "+".join(hs_vals),
+                "segment": segname,
+                "trade_inflow_gwh": round(trade_gwh, 3),
+                "reference_gwh": round(ref_gwh, 3),
+                "surplus_gwh": round(trade_gwh - ref_gwh, 3),
+                "source": " | ".join(str(s) for s in grp.source),
+            })
     pd.DataFrame(surplus_rows).to_csv(DATA_PROC / "surplus.csv", index=False)
 
     # ---- Summary ------------------------------------------------------------

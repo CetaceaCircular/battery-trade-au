@@ -27,7 +27,8 @@ an API key is present.
 | S2 | ITC Trade Map | Fallback / cross-check for Comtrade gaps | Manual, documented in issue if used |
 | S3 | ABS / DFAT statistical releases | Australian-side corroboration | Manual |
 | S4 | EV Council, *State of EVs* | Reference overlay: BEV/PHEV sales | `data/reference/installations_bottomup.csv` |
-| S5 | Clean Energy Regulator, CHBP registrations | Reference overlay: home-battery installs | same |
+| S5 | Clean Energy Regulator, Quarterly Carbon Market Report (CHBP) | Reference overlay: home-battery installs | same |
+| S5b | Clean Energy Council, *Clean Energy Australia* (utility-scale) | Reference overlay: grid-scale commissions | same |
 | S6 | Recorded calibration anchors (2026-11 verified analysis cycle) | Validation-gate targets only | `config/hs_lanes.yml → anchors` |
 
 Reference-layer files are validation overlays and are **never** mixed into the
@@ -79,14 +80,42 @@ Comtrade record by exactly one published config row.
 `flags.csv` is the full-series register; the quarterly workflow surfaces only
 latest-period flags in its summary issue.
 
-## 5. Reference overlay and the unregistered surplus
+## 5. Reference overlay and unallocated inflow
 
 `surplus.csv` compares trade-derived inflow against bottom-up registered
-installations where a public anchor exists (EVC sales for passenger EV/PHEV;
-CER CHBP registrations for home storage). Differences are *not* errors: imports
-lead installations (stock, registration lag), reference sales include non-China
-origin, and CHBP coverage is partial-year. The comparison exists to size the
-pool that no registry sees, with each row carrying its source.
+installations where a public register exists: EVC sales for passenger BEV/PHEV,
+the CER Quarterly Carbon Market Report for CHBP-validated home batteries, and
+the CEC *Clean Energy Australia* report for utility-scale commissions. Multiple
+reference rows covering the same lane (home + utility-scale both sit inside
+850760) are summed into one registered total per segment-year.
+
+Read the residuals as **unallocated inflow**, not error and not (yet)
+"unregistered product":
+
+- **Imports lead installations.** CHBP demand was rebate-announced months
+  ahead of delivery, and 2025 pack inflow substantially pre-positioned
+  wholesaler / distributor / system-integrator inventory. The CEC counted
+  268,675 home batteries *purchased* in 2025 against the CER's >193,000
+  *validated installations* — ~75,000 units of retail-channel stock inside a
+  single year, direct evidence of the import→install lag at the last mile.
+- **Registers have boundaries.** C&I batteries, portable/3C packs and loose
+  replacement packs travel in the 850760 lane but appear in no installation
+  register; grid-scale is registered with the CEC/AEMO, households with the
+  CER, vehicles with the EVC/state registries.
+- **Reference coverage is asymmetric by construction.** EVC sales count all
+  origins while the trade side counts China-origin only, so BEV/PHEV residuals
+  run negative (~13% of 2025 BEV sales were non-China-built); storage
+  residuals run positive for the inverse reason.
+- **Reference rows go stale; trade rows re-fetch.** Each reference row carries
+  a source and as-of date (the CHBP figure has a 12-month STC creation window
+  and is a rising floor). Refresh the reference layer on every analysis cycle
+  — it is not covered by the validation gate.
+
+One circularity to keep in view: the ±10% gate verifies that the pipeline
+reproduces its anchors *given the conversion factors* — it cannot detect a
+wrong factor (e.g. 8.0 kg/kWh on a lane whose format mix shifted in 2025),
+because the anchors were recorded under the same assumption family. Treat the
+gate as an arithmetic check; treat the conversion table as the argument.
 
 ## 6. Validation gate
 
