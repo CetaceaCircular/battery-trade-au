@@ -1,0 +1,477 @@
+# ============================================================================
+# China -> Australia battery trade model — HS lane taxonomy & conversion config
+# ----------------------------------------------------------------------------
+# Everything the pipeline knows about HS codes lives here. No lane, segment or
+# conversion assumption is hardcoded in src/. Edit this file to add lanes or
+# revise assumptions; every GWh figure in the outputs traces back to a row
+# below plus a Comtrade record.
+#
+# Roles:
+#   pool       battery-energy lane — contributes GWh to the placed-on-market pool
+#   signature  co-import signature lane (storage / swap detection) — kt + US$ only
+#   tripwire   watch item — arrivals trigger a flag (e.g. 870410 mining trucks)
+#   context    3C / lead-acid reference — tonnage + value only, not in the GWh pool
+#   waste      8549xx end-of-life outward-flow watch
+#
+# weight_basis:
+#   cn_netwgt  tonnage taken from China-reported exports (netWgt reliably reported)
+#   au_qty     AU-reported quantity (used only where CN weight is unavailable)
+#
+# conversion.method:
+#   kg_per_kwh    GWh = netWgt_t * 1000 / kg_per_kwh / 1e6
+#   kwh_per_unit  GWh = qty_units * kwh_per_unit * li_share / 1e6
+#   none          no energy conversion (signature / context lanes)
+# ============================================================================
+
+version: 1
+
+reporters:
+  australia: 36
+  china: 156
+
+periods:
+  annual_start: 2019
+  annual_end: 2025        # rolled forward by fetch.py to the latest available year
+  quarterly_latest_n: 8   # quarterly pull covers the latest 8 quarters (needs API key)
+
+# Validation anchors (see docs/method.md §6). These are CALIBRATION TARGETS
+# recorded from the verified 2026-11 analysis cycle, not model inputs.
+anchors:
+  pom_pool_cum_gwh_2019_2025: 70.9   # verified AU placed-on-market pool 2019-2025
+  lane_850760_gwh_2025: 31.0         # ~250 kt large-format packs, 2025
+  tolerance: 0.10                    # CI gate: reproduced totals within +/-10%
+
+lanes:
+
+  # ---- Core battery-energy lanes (the GWh pool) ---------------------------
+  - hs: "850760"
+    desc: "Li-ion accumulators (packs, all formats)"
+    segment: mixed-large-format
+    role: pool
+    weight_basis: cn_netwgt
+    conversion:
+      method: kg_per_kwh
+      kg_per_kwh: 8.0
+      source: "Blended pack-level density ~125 Wh/kg across EV/ESS/cell formats (IEA GEVO pack densities; OEM pack specs 120-160 Wh/kg)"
+    mirror_flag: core
+    notes: >
+      Tonnage is the pool spine. Item counts (20M+ units/yr) include small cells,
+      but at <1 kt aggregate small-format mass the tonnage is effectively all
+      large-format — see docs/method.md §3.2.
+
+  - hs: "870380"
+    desc: "Passenger battery-electric vehicles (BEV)"
+    segment: passenger-ev
+    role: pool
+    weight_basis: cn_netwgt
+    conversion:
+      method: kwh_per_unit
+      kwh_per_unit: 60.0
+      source: "Blended pack size of China-sourced BEVs sold in AU (Tesla Model 3/Y, BYD Atto 3/Seal/Dolphin, MG4, GWM Ora ~50-83 kWh)"
+    mirror_flag: clean
+
+  - hs: "870340"
+    desc: "Passenger hybrids (HEV)"
+    segment: passenger-hybrid
+    role: pool
+    weight_basis: cn_netwgt
+    conversion:
+      method: kwh_per_unit
+      kwh_per_unit: 1.5
+      source: "HEV battery ~1-2 kWh (Toyota/Geely hybrid references)"
+    mirror_flag: clean
+
+  - hs: "870350"
+    desc: "Passenger diesel hybrids (HEV)"
+    segment: passenger-hybrid
+    role: pool
+    weight_basis: cn_netwgt
+    conversion:
+      method: kwh_per_unit
+      kwh_per_unit: 1.5
+      source: "HEV battery ~1-2 kWh"
+    mirror_flag: clean
+
+  - hs: "870360"
+    desc: "Passenger plug-in hybrids (PHEV)"
+    segment: passenger-phev
+    role: pool
+    weight_basis: cn_netwgt
+    conversion:
+      method: kwh_per_unit
+      kwh_per_unit: 18.0
+      source: "PHEV pack ~15-25 kWh (BYD Shark/Seal U, MG HS PHEV references)"
+    mirror_flag: clean
+
+  - hs: "870370"
+    desc: "Passenger diesel plug-in hybrids (PHEV)"
+    segment: passenger-phev
+    role: pool
+    weight_basis: cn_netwgt
+    conversion:
+      method: kwh_per_unit
+      kwh_per_unit: 18.0
+      source: "PHEV pack ~15-25 kWh"
+    mirror_flag: clean
+
+  # ---- Commercial / freight lanes -----------------------------------------
+  - hs: "870240"
+    desc: "Buses/coaches (>10 seats), electric motor only"
+    segment: bus
+    role: pool
+    weight_basis: cn_netwgt
+    conversion:
+      method: kwh_per_unit
+      kwh_per_unit: 300.0
+      source: "Electric city-bus pack 250-350 kWh (BYD/Yutong AU fleet references)"
+    mirror_flag: clean
+
+  - hs: "870441"
+    desc: "Goods vehicles <=5t, diesel hybrid"
+    segment: hybrid-commercial
+    role: pool
+    weight_basis: cn_netwgt
+    conversion:
+      method: kwh_per_unit
+      kwh_per_unit: 1.8
+      source: "HEV light-truck battery ~1.5-2 kWh"
+    mirror_flag: watch
+
+  - hs: "870442"
+    desc: "Goods vehicles 5-20t, diesel hybrid"
+    segment: hybrid-commercial
+    role: pool
+    weight_basis: cn_netwgt
+    conversion:
+      method: kwh_per_unit
+      kwh_per_unit: 3.0
+      source: "HEV medium-truck battery ~3-5 kWh"
+    mirror_flag: watch
+
+  - hs: "870443"
+    desc: "Goods vehicles >20t, diesel hybrid"
+    segment: hybrid-commercial
+    role: pool
+    weight_basis: cn_netwgt
+    conversion:
+      method: kwh_per_unit
+      kwh_per_unit: 5.0
+      source: "HEV heavy-truck battery ~5-8 kWh"
+    mirror_flag: watch
+
+  - hs: "870451"
+    desc: "Hybrid utes/vans <=5t"
+    segment: hybrid-commercial
+    role: pool
+    weight_basis: cn_netwgt
+    conversion:
+      method: kwh_per_unit
+      kwh_per_unit: 1.8
+      source: "HEV ute/van battery ~1.5-2 kWh (BYD Shark-class PHEV split pending make/model layer)"
+    mirror_flag: surge
+    notes: >
+      Surge lane: US$0.2M -> US$552M / 62 kt 2023->2025 (~28,000 vehicles).
+      HEV vs PHEV pack-content split (0.1-0.8 GWh/yr) is the open variable.
+
+  - hs: "870452"
+    desc: "Goods vehicles 5-20t, spark-ignition hybrid"
+    segment: hybrid-commercial
+    role: pool
+    weight_basis: cn_netwgt
+    conversion:
+      method: kwh_per_unit
+      kwh_per_unit: 3.0
+      source: "HEV medium-truck battery ~3-5 kWh"
+    mirror_flag: watch
+
+  - hs: "870453"
+    desc: "Goods vehicles >20t, spark-ignition hybrid"
+    segment: hybrid-commercial
+    role: pool
+    weight_basis: cn_netwgt
+    conversion:
+      method: kwh_per_unit
+      kwh_per_unit: 5.0
+      source: "HEV heavy-truck battery ~5-8 kWh"
+    mirror_flag: watch
+
+  - hs: "870460"
+    desc: "Goods vehicles, electric motor only (electric trucks/vans)"
+    segment: truck
+    role: pool
+    weight_basis: cn_netwgt
+    conversion:
+      method: kwh_per_unit
+      kwh_per_unit: 100.0
+      source: "Blended light/medium electric truck pack ~80-120 kWh (LDV eT60, Fuso eCanter references)"
+    mirror_flag: clean
+
+  - hs: "870470"
+    desc: "Goods vehicles, other/unspecified propulsion"
+    segment: truck
+    role: context
+    weight_basis: cn_netwgt
+    conversion:
+      method: none
+    mirror_flag: watch
+
+  # ---- Prime movers (HS2022 restructuring) --------------------------------
+  - hs: "870121"
+    desc: "Road tractors, compression-ignition only (reference)"
+    segment: prime-mover
+    role: context
+    weight_basis: cn_netwgt
+    conversion:
+      method: none
+    mirror_flag: watch
+
+  - hs: "870122"
+    desc: "Road tractors, diesel hybrid"
+    segment: prime-mover
+    role: pool
+    weight_basis: cn_netwgt
+    conversion:
+      method: kwh_per_unit
+      kwh_per_unit: 3.0
+      source: "HEV prime-mover battery ~3-5 kWh"
+    mirror_flag: watch
+
+  - hs: "870123"
+    desc: "Road tractors, spark-ignition hybrid"
+    segment: prime-mover
+    role: pool
+    weight_basis: cn_netwgt
+    conversion:
+      method: kwh_per_unit
+      kwh_per_unit: 3.0
+      source: "HEV prime-mover battery ~3-5 kWh"
+    mirror_flag: watch
+
+  - hs: "870124"
+    desc: "Road tractors, electric motor only (electric prime movers)"
+    segment: prime-mover
+    role: pool
+    weight_basis: cn_netwgt
+    conversion:
+      method: kwh_per_unit
+      kwh_per_unit: 350.0
+      source: "Electric prime-mover pack 300-400 kWh (nascent lane: US$21M / 2.5 kt 2025)"
+    mirror_flag: watch
+
+  - hs: "870129"
+    desc: "Road tractors, other/unspecified"
+    segment: prime-mover
+    role: context
+    weight_basis: cn_netwgt
+    conversion:
+      method: none
+    mirror_flag: watch
+
+  # ---- Industrial mobility -------------------------------------------------
+  - hs: "870911"
+    desc: "Self-propelled works trucks, electric (no lifting equipment)"
+    segment: forklift-industrial
+    role: pool
+    weight_basis: cn_netwgt
+    conversion:
+      method: kwh_per_unit
+      kwh_per_unit: 20.0
+      li_share: 0.7
+      source: "Industrial works-truck battery ~20 kWh; ~70% Li-ion share assumed (rest lead-acid)"
+    mirror_flag: clean
+
+  - hs: "842710"
+    desc: "Electric forklifts"
+    segment: forklift-industrial
+    role: pool
+    weight_basis: cn_netwgt
+    conversion:
+      method: kwh_per_unit
+      kwh_per_unit: 24.0
+      li_share: 0.6
+      source: "Forklift traction battery ~24 kWh blended; ~60% Li-ion share (32.5 kt 2025 lane)"
+    mirror_flag: clean
+
+  - hs: "871160"
+    desc: "E-bikes, e-scooters, e-motorcycles"
+    segment: e-mobility
+    role: pool
+    weight_basis: cn_netwgt
+    conversion:
+      method: kwh_per_unit
+      kwh_per_unit: 1.0
+      source: "E-bike/e-scooter pack ~0.5-1.5 kWh blended"
+    mirror_flag: clean
+
+  # ---- Tripwire -------------------------------------------------------------
+  - hs: "870410"
+    desc: "Dumpers for off-highway use (mining trucks — unsplit by propulsion)"
+    segment: mining-tripwire
+    role: tripwire
+    weight_basis: cn_netwgt
+    conversion:
+      method: none
+    mirror_flag: tripwire
+    notes: >
+      AU flow historically ~zero via Comtrade (Cat/Komatsu/Hitachi dealer channels)
+      while China->World hit US$2.2B / 493 kt 2025. Code is unsplit by propulsion:
+      any AU arrival is a flag for manual review, not an automatic battery claim.
+
+  # ---- Co-import signature lanes (storage / swap detection) -----------------
+  - hs: "850440"
+    desc: "Static converters (inverters/PCS)"
+    segment: swap-signature
+    role: signature
+    weight_basis: cn_netwgt
+    conversion:
+      method: none
+    mirror_flag: core
+    notes: "Storage co-surge cross-check: 27.3 kt 2025, +35% y/y."
+
+  - hs: "853710"
+    desc: "Control boards/cabinets <=1000V"
+    segment: swap-signature
+    role: signature
+    weight_basis: cn_netwgt
+    conversion:
+      method: none
+    mirror_flag: core
+    notes: "Storage co-surge cross-check: 9.2 kt 2025, +59% y/y."
+
+  # ---- 3C / lead-acid reference (context, not in the GWh pool) --------------
+  - hs: "850710"
+    desc: "Lead-acid accumulators, starter batteries"
+    segment: 3c-reference
+    role: context
+    weight_basis: cn_netwgt
+    conversion:
+      method: none
+    mirror_flag: divergent
+    notes: "Mirror ratio 1.84x — AU-reported imports run well above CN-reported exports."
+
+  - hs: "850720"
+    desc: "Lead-acid accumulators (non-starter)"
+    segment: 3c-reference
+    role: context
+    weight_basis: cn_netwgt
+    conversion:
+      method: none
+    mirror_flag: divergent
+
+  - hs: "850730"
+    desc: "Nickel-cadmium accumulators"
+    segment: 3c-reference
+    role: context
+    weight_basis: cn_netwgt
+    conversion:
+      method: none
+    mirror_flag: reference
+
+  - hs: "850740"
+    desc: "Nickel-iron accumulators"
+    segment: 3c-reference
+    role: context
+    weight_basis: cn_netwgt
+    conversion:
+      method: none
+    mirror_flag: reference
+
+  - hs: "850750"
+    desc: "Nickel-metal hydride accumulators"
+    segment: 3c-reference
+    role: context
+    weight_basis: cn_netwgt
+    conversion:
+      method: none
+    mirror_flag: reference
+
+  - hs: "850780"
+    desc: "Other accumulators (excl. Li-ion, lead-acid, NiCd, NiFe, NiMH)"
+    segment: 3c-reference
+    role: context
+    weight_basis: cn_netwgt
+    conversion:
+      method: none
+    mirror_flag: reference
+
+  - hs: "850610"
+    desc: "Primary cells/batteries, manganese dioxide (alkaline)"
+    segment: 3c-reference
+    role: context
+    weight_basis: cn_netwgt
+    conversion:
+      method: none
+    mirror_flag: reference
+
+  - hs: "850650"
+    desc: "Primary cells/batteries, lithium"
+    segment: 3c-reference
+    role: context
+    weight_basis: cn_netwgt
+    conversion:
+      method: none
+    mirror_flag: reference
+
+  - hs: "850660"
+    desc: "Primary cells/batteries, silver oxide / air-zinc class"
+    segment: 3c-reference
+    role: context
+    weight_basis: cn_netwgt
+    conversion:
+      method: none
+    mirror_flag: reference
+
+  # ---- End-of-life outward watch (8549xx, HS2022) ---------------------------
+  - hs: "854910"
+    desc: "Waste/scrap of primary cells, batteries and accumulators (unsorted class)"
+    segment: waste-watch
+    role: waste
+    weight_basis: cn_netwgt
+    conversion:
+      method: none
+    mirror_flag: watch
+
+  - hs: "854911"
+    desc: "Waste/scrap of primary cells/batteries containing mercury/cadmium/lead class"
+    segment: waste-watch
+    role: waste
+    weight_basis: cn_netwgt
+    conversion:
+      method: none
+    mirror_flag: watch
+
+  - hs: "854912"
+    desc: "Waste/scrap of batteries, sorted by chemical type"
+    segment: waste-watch
+    role: waste
+    weight_basis: cn_netwgt
+    conversion:
+      method: none
+    mirror_flag: watch
+
+  - hs: "854913"
+    desc: "Waste/scrap of batteries, unsorted/mixed"
+    segment: waste-watch
+    role: waste
+    weight_basis: cn_netwgt
+    conversion:
+      method: none
+    mirror_flag: watch
+
+  - hs: "854914"
+    desc: "Waste/scrap of batteries, other"
+    segment: waste-watch
+    role: waste
+    weight_basis: cn_netwgt
+    conversion:
+      method: none
+    mirror_flag: watch
+
+  - hs: "854919"
+    desc: "Waste/scrap of batteries, other (residual)"
+    segment: waste-watch
+    role: waste
+    weight_basis: cn_netwgt
+    conversion:
+      method: none
+    mirror_flag: watch
