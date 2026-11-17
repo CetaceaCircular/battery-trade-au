@@ -76,6 +76,9 @@ def main() -> None:
                 "gwh": gwh_for(lane, qty, cn_wgt),
             })
     ly = pd.DataFrame(rows)
+    for col, nd in (("cn_fob_usd", 2), ("au_cif_usd", 2), ("cn_netwgt_t", 3),
+                    ("units", 0), ("mirror_ratio", 4), ("gwh", 6)):
+        ly[col] = ly[col].round(nd)
     ly.to_csv(DATA_PROC / "lane_year.csv", index=False)
 
     # ---- POM pool (battery-energy lanes only) ------------------------------
@@ -83,6 +86,7 @@ def main() -> None:
     pool["cum_gwh"] = pool.groupby("hs")["gwh"].cumsum()
     pool_year = pool.groupby("year", as_index=False)["gwh"].sum()
     pool_year["cum_gwh"] = pool_year.gwh.cumsum()
+    pool_year[["gwh", "cum_gwh"]] = pool_year[["gwh", "cum_gwh"]].round(4)
     pool_year.to_csv(DATA_PROC / "pom_pool.csv", index=False)
 
     # ---- Mirror ratios (lanes with both sides reported) ---------------------
@@ -107,13 +111,15 @@ def main() -> None:
                               "detail": f"870410 AU CIF US${r.au_cif_usd/1e6:.1f}M "
                                         f"({r.units:.0f} units) — review propulsion split"})
             # mirror-ratio break (material lanes only)
-            if r.mirror_ratio and r.au_cif_usd >= MAT_VALUE and \
+            ratio_ok = r.mirror_ratio is not None and pd.notna(r.mirror_ratio)
+            if ratio_ok and r.au_cif_usd >= MAT_VALUE and \
                     not (RATIO_BAND[0] <= r.mirror_ratio <= RATIO_BAND[1]):
                 flags.append({"year": year, "hs": code, "kind": "mirror-ratio out of band",
                               "detail": f"ratio {r.mirror_ratio:.2f} outside "
                                         f"{RATIO_BAND[0]}-{RATIO_BAND[1]}"})
             if prev is not None:
-                if r.mirror_ratio and prev.mirror_ratio and \
+                prev_ok = prev.mirror_ratio is not None and pd.notna(prev.mirror_ratio)
+                if ratio_ok and prev_ok and prev.mirror_ratio > 0 and \
                         r.au_cif_usd >= MAT_VALUE and \
                         abs(r.mirror_ratio / prev.mirror_ratio - 1) > RATIO_BREAK:
                     flags.append({"year": year, "hs": code, "kind": "mirror-ratio break",
@@ -138,7 +144,9 @@ def main() -> None:
                           "detail": "packs/inverters/cabinets co-surge "
                                     f"(850760 {row['850760']:+.0%}, 850440 {row['850440']:+.0%}, "
                                     f"853710 {row['853710']:+.0%}) — storage/swap indicator"})
-    pd.DataFrame(flags).to_csv(DATA_PROC / "flags.csv", index=False)
+    flags_df = pd.DataFrame(flags)
+    flags_df["year"] = flags_df["year"].astype(int)
+    flags_df.to_csv(DATA_PROC / "flags.csv", index=False)
 
     # ---- Surplus vs bottom-up reference layer (validation overlay) ----------
     surplus_rows = []
@@ -151,7 +159,8 @@ def main() -> None:
                 trade_gwh = float(seg.gwh.sum())
                 ref_gwh = float(r.units) * float(r.kwh_per_unit) / 1e6
                 surplus_rows.append({
-                    "year": int(r.year), "hs": str(r.get("hs", "")),
+                    "year": int(r.year),
+                    "hs": str(r.hs) if pd.notna(r.hs) else "",
                     "segment": r.segment,
                     "trade_inflow_gwh": round(trade_gwh, 3),
                     "reference_gwh": round(ref_gwh, 3),
@@ -177,7 +186,7 @@ def main() -> None:
             "tolerance": a["tolerance"],
         },
         "n_flags": len(flags),
-        "flags": flags,
+        "flags": json.loads(flags_df.to_json(orient="records", force_ascii=False)),
     }
     (DATA_PROC / "summary.json").write_text(
         json.dumps(summary, indent=1, default=lambda o: float(o)), encoding="utf-8")
