@@ -1,0 +1,107 @@
+year,hs,kind,detail
+2019,842710,mirror-ratio out of band,ratio 0.54 outside 0.8-2.0
+2020,842710,mirror-ratio out of band,ratio 0.60 outside 0.8-2.0
+2021,842710,mirror-ratio out of band,ratio 0.67 outside 0.8-2.0
+2021,842710,>50% value move,"value 25,123,472 -> 53,063,627 (+111%)"
+2021,842710,>50% tonnage move,"tonnage 8,115 -> 15,617 (+92%)"
+2022,842710,mirror-ratio out of band,ratio 0.64 outside 0.8-2.0
+2022,842710,>50% value move,"value 53,063,627 -> 83,049,984 (+57%)"
+2022,842710,>50% tonnage move,"tonnage 15,617 -> 24,733 (+58%)"
+2023,842710,mirror-ratio out of band,ratio 0.63 outside 0.8-2.0
+2024,842710,mirror-ratio out of band,ratio 0.73 outside 0.8-2.0
+2025,842710,mirror-ratio out of band,ratio 0.79 outside 0.8-2.0
+2020,850440,>50% tonnage move,"tonnage 5,989 -> 16,989 (+184%)"
+2020,850610,>50% tonnage move,"tonnage 3,008 -> 6,857 (+128%)"
+2019,850650,mirror-ratio out of band,ratio 3.76 outside 0.8-2.0
+2020,850650,mirror-ratio out of band,ratio 3.87 outside 0.8-2.0
+2020,850650,>50% value move,"value 7,507,179 -> 11,490,280 (+53%)"
+2021,850650,mirror-ratio out of band,ratio 2.54 outside 0.8-2.0
+2022,850650,mirror-ratio out of band,ratio 2.96 outside 0.8-2.0
+2023,850650,mirror-ratio out of band,ratio 3.81 outside 0.8-2.0
+2024,850650,mirror-ratio out of band,ratio 3.09 outside 0.8-2.0
+2025,850650,mirror-ratio out of band,ratio 3.67 outside 0.8-2.0
+2022,850750,>50% tonnage move,tonnage 104 -> 262 (+153%)
+2020,850760,>50% tonnage move,"tonnage 2,184 -> 6,558 (+200%)"
+2021,850760,>50% value move,"value 192,317,131 -> 318,785,172 (+66%)"
+2021,850760,>50% tonnage move,"tonnage 6,558 -> 10,876 (+66%)"
+2022,850760,>50% value move,"value 318,785,172 -> 642,502,896 (+102%)"
+2022,850760,>50% tonnage move,"tonnage 10,876 -> 27,214 (+150%)"
+2024,850760,>50% value move,"value 829,267,082 -> 1,655,860,875 (+100%)"
+2024,850760,>50% tonnage move,"tonnage 31,036 -> 82,657 (+166%)"
+2025,850760,>50% value move,"value 1,655,860,875 -> 4,082,039,987 (+147%)"
+2025,850760,>50% tonnage move,"tonnage 82,657 -> 249,640 (+202%)"
+2022,850780,mirror-ratio break,45.25 -> 1.62 y/y
+2022,850780,>50% value move,"value 3,655,534 -> 5,695,723 (+56%)"
+2022,850780,>50% tonnage move,tonnage 7 -> 413 (+5748%)
+2023,850780,>50% value move,"value 5,695,723 -> 9,776,704 (+72%)"
+2025,850780,mirror-ratio out of band,ratio 37.25 outside 0.8-2.0
+2025,850780,>50% value move,"value 3,265,711 -> 7,634,929 (+134%)"
+2025,853710,>50% tonnage move,"tonnage 5,775 -> 9,171 (+59%)"
+2023,870121,mirror-ratio break,0.40 -> 1.32 y/y
+2023,870121,>50% value move,"value 1,012,718 -> 11,577,076 (+1043%)"
+2023,870121,>50% tonnage move,"tonnage 336 -> 1,180 (+251%)"
+2024,870121,>50% value move,"value 11,577,076 -> 19,974,134 (+73%)"
+2024,870121,>50% tonnage move,"tonnage 1,180 -> 2,048 (+74%)"
+2021,870240,mirror-ratio out of band,ratio 0.75 outside 0.8-2.0
+2022,870240,mirror-ratio out of band,ratio 0.72 outside 0.8-2.0
+2022,870240,>50% value move,"value 8,718,968 -> 13,907,848 (+60%)"
+2022,870240,>50% tonnage move,tonnage 466 -> 809 (+74%)
+2024,870240,>50% value move,"value 16,251,854 -> 35,281,699 (+117%)"
+2024,870240,>50% tonnage move,"tonnage 674 -> 1,580 (+134%)"
+2025,870240,>50% value move,"value 35,281,699 -> 56,476,338 (+60%)"
+2022,870340,mirror-ratio break,0.41 -> 0.94 y/y
+2022,870340,>50% value move,"value 14,075 -> 74,703,356 (+530647%)"
+2022,870340,>50% tonnage move,"tonnage 3 -> 7,100 (+206289%)"
+2023,870340,>50% value move,"value 74,703,356 -> 180,639,506 (+142%)"
+2023,870340,>50% tonnage move,"tonnage 7,100 -> 16,233 (+129%)"
+2024,870340,>50% value move,"value 180,639,506 -> 331,080,638 (+83%)"
+2020,870360,>50% tonnage move,tonnage 183 -> 295 (+62%)
+2021,870360,mirror-ratio out of band,ratio 0.22 outside 0.8-2.0
+2021,870360,>50% tonnage move,"tonnage 295 -> 2,769 (+838%)"
+2022,870360,mirror-ratio out of band,ratio 0.42 outside 0.8-2.0
+2022,870360,mirror-ratio break,0.22 -> 0.42 y/y
+2022,870360,>50% value move,"value 9,459,341 -> 43,557,656 (+360%)"
+2022,870360,>50% tonnage move,"tonnage 2,769 -> 7,405 (+167%)"
+2023,870360,mirror-ratio break,0.42 -> 0.91 y/y
+2023,870360,>50% tonnage move,"tonnage 7,405 -> 3,692 (-50%)"
+2024,870360,>50% value move,"value 51,582,369 -> 187,018,117 (+263%)"
+2024,870360,>50% tonnage move,"tonnage 3,692 -> 16,257 (+340%)"
+2025,870360,>50% value move,"value 187,018,117 -> 588,980,408 (+215%)"
+2025,870360,>50% tonnage move,"tonnage 16,257 -> 63,896 (+293%)"
+2020,870380,mirror-ratio out of band,ratio 0.69 outside 0.8-2.0
+2020,870380,mirror-ratio break,0.17 -> 0.69 y/y
+2020,870380,>50% value move,"value 185,659 -> 7,126,303 (+3738%)"
+2020,870380,>50% tonnage move,tonnage 121 -> 711 (+488%)
+2021,870380,mirror-ratio break,0.69 -> 1.31 y/y
+2021,870380,>50% value move,"value 7,126,303 -> 536,065,960 (+7422%)"
+2021,870380,>50% tonnage move,"tonnage 711 -> 25,144 (+3437%)"
+2022,870380,>50% value move,"value 536,065,960 -> 1,209,783,036 (+126%)"
+2022,870380,>50% tonnage move,"tonnage 25,144 -> 66,983 (+166%)"
+2023,870380,>50% value move,"value 1,209,783,036 -> 2,711,116,907 (+124%)"
+2023,870380,>50% tonnage move,"tonnage 66,983 -> 161,499 (+141%)"
+2021,870410,mining-truck arrival,870410 AU CIF US$60.1M (133 units) — review propulsion split
+2021,870410,>50% value move,"value 1,502,472 -> 60,088,205 (+3899%)"
+2021,870410,>50% tonnage move,"tonnage 187 -> 3,659 (+1861%)"
+2023,870410,>50% value move,"value 313,117 -> 9,684,344 (+2993%)"
+2023,870410,>50% tonnage move,"tonnage 34 -> 1,126 (+3166%)"
+2024,870451,mirror-ratio out of band,ratio 0.38 outside 0.8-2.0
+2024,870451,mirror-ratio break,0.81 -> 0.38 y/y
+2024,870451,>50% value move,"value 139,135 -> 21,000,958 (+14994%)"
+2024,870451,>50% tonnage move,"tonnage 15 -> 5,864 (+38151%)"
+2025,870451,mirror-ratio break,0.38 -> 1.18 y/y
+2025,870451,>50% value move,"value 21,000,958 -> 652,848,433 (+3009%)"
+2025,870451,>50% tonnage move,"tonnage 5,864 -> 62,133 (+960%)"
+2022,870460,mirror-ratio out of band,ratio 2.21 outside 0.8-2.0
+2023,870460,mirror-ratio break,2.21 -> 1.05 y/y
+2023,870460,>50% value move,"value 7,547,097 -> 22,511,217 (+198%)"
+2023,870460,>50% tonnage move,"tonnage 240 -> 1,427 (+495%)"
+2024,870460,mirror-ratio out of band,ratio 2.00 outside 0.8-2.0
+2024,870460,mirror-ratio break,1.05 -> 2.00 y/y
+2025,870460,mirror-ratio out of band,ratio 2.61 outside 0.8-2.0
+2022,870911,>50% tonnage move,tonnage 169 -> 389 (+130%)
+2025,870911,>50% tonnage move,tonnage 442 -> 707 (+60%)
+2020,871160,>50% value move,"value 42,687,687 -> 72,362,975 (+70%)"
+2020,871160,>50% tonnage move,"tonnage 2,604 -> 4,237 (+63%)"
+2021,871160,>50% value move,"value 72,362,975 -> 141,505,810 (+96%)"
+2021,871160,>50% tonnage move,"tonnage 4,237 -> 7,095 (+67%)"
+2025,850760+850440+853710,co-import signature,"packs/inverters/cabinets co-surge (850760 +202%, 850440 +35%, 853710 +59%) — storage/swap indicator"
