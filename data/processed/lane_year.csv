@@ -1,0 +1,288 @@
+year,hs,desc,segment,role,cn_fob_usd,au_cif_usd,cn_netwgt_t,units,mirror_ratio,gwh
+2019,850760,"Li-ion accumulators (packs, all formats)",mixed-large-format,pool,148272214.0,167761639.66,2183.742,7510659.0,1.1314,0.272968
+2019,870380,Passenger battery-electric vehicles (BEV),passenger-ev,pool,1095340.0,185658.87,120.988,56.0,0.1695,0.00336
+2019,870340,Passenger hybrids (HEV),passenger-hybrid,pool,0.0,0.0,0.0,0.0,,0.0
+2019,870350,Passenger diesel hybrids (HEV),passenger-hybrid,pool,0.0,0.0,0.0,0.0,,0.0
+2019,870360,Passenger plug-in hybrids (PHEV),passenger-phev,pool,4246575.0,1338645.39,182.634,91.0,0.3152,0.001638
+2019,870370,Passenger diesel plug-in hybrids (PHEV),passenger-phev,pool,0.0,0.0,0.0,0.0,,0.0
+2019,870240,"Buses/coaches (>10 seats), electric motor only",bus,pool,1329945.0,15358.68,62.95,9.0,0.0115,0.0027
+2019,870441,"Goods vehicles <=5t, diesel hybrid",hybrid-commercial,pool,0.0,0.0,0.0,0.0,,0.0
+2019,870442,"Goods vehicles 5-20t, diesel hybrid",hybrid-commercial,pool,0.0,0.0,0.0,0.0,,0.0
+2019,870443,"Goods vehicles >20t, diesel hybrid",hybrid-commercial,pool,0.0,0.0,0.0,0.0,,0.0
+2019,870451,Hybrid utes/vans <=5t,hybrid-commercial,pool,0.0,0.0,0.0,0.0,,0.0
+2019,870452,"Goods vehicles 5-20t, spark-ignition hybrid",hybrid-commercial,pool,0.0,0.0,0.0,0.0,,0.0
+2019,870453,"Goods vehicles >20t, spark-ignition hybrid",hybrid-commercial,pool,0.0,0.0,0.0,0.0,,0.0
+2019,870460,"Goods vehicles, electric motor only (electric trucks/vans)",truck,pool,0.0,0.0,0.0,0.0,,0.0
+2019,870470,"Goods vehicles, other/unspecified propulsion",truck,context,0.0,0.0,0.0,0.0,,0.0
+2019,870121,"Road tractors, compression-ignition only (reference)",prime-mover,context,0.0,0.0,0.0,0.0,,0.0
+2019,870122,"Road tractors, diesel hybrid",prime-mover,pool,0.0,0.0,0.0,0.0,,0.0
+2019,870123,"Road tractors, spark-ignition hybrid",prime-mover,pool,0.0,0.0,0.0,0.0,,0.0
+2019,870124,"Road tractors, electric motor only (electric prime movers)",prime-mover,pool,0.0,0.0,0.0,0.0,,0.0
+2019,870129,"Road tractors, other/unspecified",prime-mover,context,0.0,0.0,0.0,0.0,,0.0
+2019,870911,"Self-propelled works trucks, electric (no lifting equipment)",forklift-industrial,pool,971683.0,475971.74,150.375,1255.0,0.4898,0.01757
+2019,842710,Electric forklifts,forklift-industrial,pool,52246418.0,28332819.0,9777.767,7013.0,0.5423,0.100987
+2019,871160,"E-bikes, e-scooters, e-motorcycles",e-mobility,pool,49049103.0,42687686.77,2603.842,146108.0,0.8703,0.146108
+2019,870410,Dumpers for off-highway use (mining trucks — unsplit by propulsion),mining-tripwire,tripwire,12747344.0,12664915.16,1242.15,125.0,0.9935,0.0
+2019,850440,Static converters (inverters/PCS),swap-signature,signature,295171675.0,420183217.21,5988.613,16248175.0,1.4235,0.0
+2019,853710,Control boards/cabinets <=1000V,swap-signature,signature,78972972.0,112226468.73,2797.524,2797524.0,1.4211,0.0
+2019,850710,"Lead-acid accumulators, starter batteries",3c-reference,context,17462154.0,25356284.1,7043.275,416876.0,1.4521,0.0
+2019,850720,Lead-acid accumulators (non-starter),3c-reference,context,86288479.0,87849154.79,22021.296,2240750.0,1.0181,0.0
+2019,850730,Nickel-cadmium accumulators,3c-reference,context,1538145.0,2043559.58,0.0,199613.0,1.3286,0.0
+2019,850740,Nickel-iron accumulators,3c-reference,context,221311.0,255933.41,36.14,1380.0,1.1564,0.0
+2019,850750,Nickel-metal hydride accumulators,3c-reference,context,3119331.0,5925861.19,56.331,3222767.0,1.8997,0.0
+2019,850780,"Other accumulators (excl. Li-ion, lead-acid, NiCd, NiFe, NiMH)",3c-reference,context,800359.0,3166257.96,97.025,8577.0,3.956,0.0
+2019,850610,"Primary cells/batteries, manganese dioxide (alkaline)",3c-reference,context,25149954.0,35870627.85,3008.425,227726891.0,1.4263,0.0
+2019,850650,"Primary cells/batteries, lithium",3c-reference,context,1996231.0,7507179.2,21.549,5446065.0,3.7607,0.0
+2019,850660,"Primary cells/batteries, silver oxide / air-zinc class",3c-reference,context,176820.0,233070.27,1.981,947388.0,1.3181,0.0
+2019,854910,"Waste/scrap of primary cells, batteries and accumulators (unsorted class)",waste-watch,waste,0.0,0.0,0.0,0.0,,0.0
+2019,854911,Waste/scrap of primary cells/batteries containing mercury/cadmium/lead class,waste-watch,waste,0.0,0.0,0.0,0.0,,0.0
+2019,854912,"Waste/scrap of batteries, sorted by chemical type",waste-watch,waste,0.0,0.0,0.0,0.0,,0.0
+2019,854913,"Waste/scrap of batteries, unsorted/mixed",waste-watch,waste,0.0,0.0,0.0,0.0,,0.0
+2019,854914,"Waste/scrap of batteries, other",waste-watch,waste,0.0,0.0,0.0,0.0,,0.0
+2019,854919,"Waste/scrap of batteries, other (residual)",waste-watch,waste,0.0,0.0,0.0,0.0,,0.0
+2020,850760,"Li-ion accumulators (packs, all formats)",mixed-large-format,pool,187681129.0,192317131.12,6558.065,7739346.0,1.0247,0.819758
+2020,870380,Passenger battery-electric vehicles (BEV),passenger-ev,pool,10315693.0,7126302.66,710.921,582.0,0.6908,0.03492
+2020,870340,Passenger hybrids (HEV),passenger-hybrid,pool,0.0,0.0,0.0,0.0,,0.0
+2020,870350,Passenger diesel hybrids (HEV),passenger-hybrid,pool,0.0,0.0,0.0,0.0,,0.0
+2020,870360,Passenger plug-in hybrids (PHEV),passenger-phev,pool,6303192.0,0.0,295.178,137.0,0.0,0.002466
+2020,870370,Passenger diesel plug-in hybrids (PHEV),passenger-phev,pool,0.0,0.0,0.0,0.0,,0.0
+2020,870240,"Buses/coaches (>10 seats), electric motor only",bus,pool,0.0,0.0,0.0,0.0,,0.0
+2020,870441,"Goods vehicles <=5t, diesel hybrid",hybrid-commercial,pool,0.0,0.0,0.0,0.0,,0.0
+2020,870442,"Goods vehicles 5-20t, diesel hybrid",hybrid-commercial,pool,0.0,0.0,0.0,0.0,,0.0
+2020,870443,"Goods vehicles >20t, diesel hybrid",hybrid-commercial,pool,0.0,0.0,0.0,0.0,,0.0
+2020,870451,Hybrid utes/vans <=5t,hybrid-commercial,pool,0.0,0.0,0.0,0.0,,0.0
+2020,870452,"Goods vehicles 5-20t, spark-ignition hybrid",hybrid-commercial,pool,0.0,0.0,0.0,0.0,,0.0
+2020,870453,"Goods vehicles >20t, spark-ignition hybrid",hybrid-commercial,pool,0.0,0.0,0.0,0.0,,0.0
+2020,870460,"Goods vehicles, electric motor only (electric trucks/vans)",truck,pool,0.0,0.0,0.0,0.0,,0.0
+2020,870470,"Goods vehicles, other/unspecified propulsion",truck,context,0.0,0.0,0.0,0.0,,0.0
+2020,870121,"Road tractors, compression-ignition only (reference)",prime-mover,context,0.0,0.0,0.0,0.0,,0.0
+2020,870122,"Road tractors, diesel hybrid",prime-mover,pool,0.0,0.0,0.0,0.0,,0.0
+2020,870123,"Road tractors, spark-ignition hybrid",prime-mover,pool,0.0,0.0,0.0,0.0,,0.0
+2020,870124,"Road tractors, electric motor only (electric prime movers)",prime-mover,pool,0.0,0.0,0.0,0.0,,0.0
+2020,870129,"Road tractors, other/unspecified",prime-mover,context,0.0,0.0,0.0,0.0,,0.0
+2020,870911,"Self-propelled works trucks, electric (no lifting equipment)",forklift-industrial,pool,916480.0,681027.22,115.448,629.0,0.7431,0.008806
+2020,842710,Electric forklifts,forklift-industrial,pool,41629169.0,25123472.23,8115.406,7020.0,0.6035,0.101088
+2020,871160,"E-bikes, e-scooters, e-motorcycles",e-mobility,pool,80561423.0,72362974.62,4237.199,214608.0,0.8982,0.214608
+2020,870410,Dumpers for off-highway use (mining trucks — unsplit by propulsion),mining-tripwire,tripwire,939930.0,1502472.08,186.574,126.0,1.5985,0.0
+2020,850440,Static converters (inverters/PCS),swap-signature,signature,387705765.0,528125615.8,16988.898,17072340.0,1.3622,0.0
+2020,853710,Control boards/cabinets <=1000V,swap-signature,signature,81837006.0,126780473.43,2933.777,2933777.0,1.5492,0.0
+2020,850710,"Lead-acid accumulators, starter batteries",3c-reference,context,16538551.0,24735142.41,6322.907,525405.0,1.4956,0.0
+2020,850720,Lead-acid accumulators (non-starter),3c-reference,context,80353629.0,76319906.58,22798.376,1525206.0,0.9498,0.0
+2020,850730,Nickel-cadmium accumulators,3c-reference,context,2230315.0,3143107.35,123.561,190762.0,1.4093,0.0
+2020,850740,Nickel-iron accumulators,3c-reference,context,170256.0,130735.34,26.765,1256.0,0.7679,0.0
+2020,850750,Nickel-metal hydride accumulators,3c-reference,context,3097857.0,5693367.16,103.287,2438622.0,1.8378,0.0
+2020,850780,"Other accumulators (excl. Li-ion, lead-acid, NiCd, NiFe, NiMH)",3c-reference,context,420106.0,2643502.16,61.353,146964.0,6.2925,0.0
+2020,850610,"Primary cells/batteries, manganese dioxide (alkaline)",3c-reference,context,30709289.0,46318517.62,6857.279,293861998.0,1.5083,0.0
+2020,850650,"Primary cells/batteries, lithium",3c-reference,context,2971631.0,11490279.66,89.674,8268204.0,3.8667,0.0
+2020,850660,"Primary cells/batteries, silver oxide / air-zinc class",3c-reference,context,196395.0,160165.92,1.602,1099640.0,0.8155,0.0
+2020,854910,"Waste/scrap of primary cells, batteries and accumulators (unsorted class)",waste-watch,waste,0.0,0.0,0.0,0.0,,0.0
+2020,854911,Waste/scrap of primary cells/batteries containing mercury/cadmium/lead class,waste-watch,waste,0.0,0.0,0.0,0.0,,0.0
+2020,854912,"Waste/scrap of batteries, sorted by chemical type",waste-watch,waste,0.0,0.0,0.0,0.0,,0.0
+2020,854913,"Waste/scrap of batteries, unsorted/mixed",waste-watch,waste,0.0,0.0,0.0,0.0,,0.0
+2020,854914,"Waste/scrap of batteries, other",waste-watch,waste,0.0,0.0,0.0,0.0,,0.0
+2020,854919,"Waste/scrap of batteries, other (residual)",waste-watch,waste,0.0,0.0,0.0,0.0,,0.0
+2021,850760,"Li-ion accumulators (packs, all formats)",mixed-large-format,pool,296119424.0,318785171.58,10876.458,9130549.0,1.0765,1.359557
+2021,870380,Passenger battery-electric vehicles (BEV),passenger-ev,pool,409520706.0,536065959.66,25144.062,14479.0,1.309,0.86874
+2021,870340,Passenger hybrids (HEV),passenger-hybrid,pool,34024.0,14075.14,3.44,2.0,0.4137,3e-06
+2021,870350,Passenger diesel hybrids (HEV),passenger-hybrid,pool,0.0,0.0,0.0,0.0,,0.0
+2021,870360,Passenger plug-in hybrids (PHEV),passenger-phev,pool,43012287.0,9459341.07,2768.682,1497.0,0.2199,0.026946
+2021,870370,Passenger diesel plug-in hybrids (PHEV),passenger-phev,pool,0.0,0.0,0.0,0.0,,0.0
+2021,870240,"Buses/coaches (>10 seats), electric motor only",bus,pool,11677690.0,8718967.79,465.655,37.0,0.7466,0.0111
+2021,870441,"Goods vehicles <=5t, diesel hybrid",hybrid-commercial,pool,0.0,0.0,0.0,0.0,,0.0
+2021,870442,"Goods vehicles 5-20t, diesel hybrid",hybrid-commercial,pool,0.0,0.0,0.0,0.0,,0.0
+2021,870443,"Goods vehicles >20t, diesel hybrid",hybrid-commercial,pool,0.0,0.0,0.0,0.0,,0.0
+2021,870451,Hybrid utes/vans <=5t,hybrid-commercial,pool,0.0,0.0,0.0,0.0,,0.0
+2021,870452,"Goods vehicles 5-20t, spark-ignition hybrid",hybrid-commercial,pool,0.0,0.0,0.0,0.0,,0.0
+2021,870453,"Goods vehicles >20t, spark-ignition hybrid",hybrid-commercial,pool,0.0,0.0,0.0,0.0,,0.0
+2021,870460,"Goods vehicles, electric motor only (electric trucks/vans)",truck,pool,0.0,0.0,0.0,0.0,,0.0
+2021,870470,"Goods vehicles, other/unspecified propulsion",truck,context,0.0,0.0,0.0,0.0,,0.0
+2021,870121,"Road tractors, compression-ignition only (reference)",prime-mover,context,0.0,0.0,0.0,0.0,,0.0
+2021,870122,"Road tractors, diesel hybrid",prime-mover,pool,0.0,0.0,0.0,0.0,,0.0
+2021,870123,"Road tractors, spark-ignition hybrid",prime-mover,pool,0.0,0.0,0.0,0.0,,0.0
+2021,870124,"Road tractors, electric motor only (electric prime movers)",prime-mover,pool,0.0,0.0,0.0,0.0,,0.0
+2021,870129,"Road tractors, other/unspecified",prime-mover,context,0.0,0.0,0.0,0.0,,0.0
+2021,870911,"Self-propelled works trucks, electric (no lifting equipment)",forklift-industrial,pool,1528333.0,1109699.5,168.856,991.0,0.7261,0.013874
+2021,842710,Electric forklifts,forklift-industrial,pool,78683657.0,53063627.39,15616.844,12564.0,0.6744,0.180922
+2021,871160,"E-bikes, e-scooters, e-motorcycles",e-mobility,pool,142473570.0,141505810.03,7094.725,360121.0,0.9932,0.360121
+2021,870410,Dumpers for off-highway use (mining trucks — unsplit by propulsion),mining-tripwire,tripwire,65183635.0,60088204.79,3659.153,133.0,0.9218,0.0
+2021,850440,Static converters (inverters/PCS),swap-signature,signature,460707556.0,624591108.26,18305.675,21444419.0,1.3557,0.0
+2021,853710,Control boards/cabinets <=1000V,swap-signature,signature,102704497.0,160798998.48,3469.645,3469645.0,1.5656,0.0
+2021,850710,"Lead-acid accumulators, starter batteries",3c-reference,context,19135707.0,30107402.07,7254.671,521217.0,1.5734,0.0
+2021,850720,Lead-acid accumulators (non-starter),3c-reference,context,95666033.0,92891414.28,26535.7,1788592.0,0.971,0.0
+2021,850730,Nickel-cadmium accumulators,3c-reference,context,2209067.0,2846205.4,102.705,161246.0,1.2884,0.0
+2021,850740,Nickel-iron accumulators,3c-reference,context,191623.0,145081.66,31.747,1218.0,0.7571,0.0
+2021,850750,Nickel-metal hydride accumulators,3c-reference,context,3253000.0,5179902.51,103.599,2941397.0,1.5923,0.0
+2021,850780,"Other accumulators (excl. Li-ion, lead-acid, NiCd, NiFe, NiMH)",3c-reference,context,80783.0,3655534.27,7.063,105220.0,45.2513,0.0
+2021,850610,"Primary cells/batteries, manganese dioxide (alkaline)",3c-reference,context,29252938.0,47725692.91,5866.654,277030564.0,1.6315,0.0
+2021,850650,"Primary cells/batteries, lithium",3c-reference,context,5345108.0,13552298.11,144.361,24584768.0,2.5355,0.0
+2021,850660,"Primary cells/batteries, silver oxide / air-zinc class",3c-reference,context,247362.0,183318.38,1.612,1265648.0,0.7411,0.0
+2021,854910,"Waste/scrap of primary cells, batteries and accumulators (unsorted class)",waste-watch,waste,0.0,0.0,0.0,0.0,,0.0
+2021,854911,Waste/scrap of primary cells/batteries containing mercury/cadmium/lead class,waste-watch,waste,0.0,0.0,0.0,0.0,,0.0
+2021,854912,"Waste/scrap of batteries, sorted by chemical type",waste-watch,waste,0.0,0.0,0.0,0.0,,0.0
+2021,854913,"Waste/scrap of batteries, unsorted/mixed",waste-watch,waste,0.0,0.0,0.0,0.0,,0.0
+2021,854914,"Waste/scrap of batteries, other",waste-watch,waste,0.0,0.0,0.0,0.0,,0.0
+2021,854919,"Waste/scrap of batteries, other (residual)",waste-watch,waste,0.0,0.0,0.0,0.0,,0.0
+2022,850760,"Li-ion accumulators (packs, all formats)",mixed-large-format,pool,636087839.0,642502895.57,27214.0,9294340.0,1.0101,3.40175
+2022,870380,Passenger battery-electric vehicles (BEV),passenger-ev,pool,1069585823.0,1209783035.53,66983.318,35915.0,1.1311,2.1549
+2022,870340,Passenger hybrids (HEV),passenger-hybrid,pool,79582386.0,74703355.79,7099.769,4302.0,0.9387,0.006453
+2022,870350,Passenger diesel hybrids (HEV),passenger-hybrid,pool,0.0,0.0,0.0,0.0,,0.0
+2022,870360,Passenger plug-in hybrids (PHEV),passenger-phev,pool,102966453.0,43557656.27,7405.012,4000.0,0.423,0.072
+2022,870370,Passenger diesel plug-in hybrids (PHEV),passenger-phev,pool,0.0,0.0,0.0,0.0,,0.0
+2022,870240,"Buses/coaches (>10 seats), electric motor only",bus,pool,19365277.0,13907847.82,808.94,77.0,0.7182,0.0231
+2022,870441,"Goods vehicles <=5t, diesel hybrid",hybrid-commercial,pool,0.0,2404.96,0.0,1.0,,2e-06
+2022,870442,"Goods vehicles 5-20t, diesel hybrid",hybrid-commercial,pool,0.0,0.0,0.0,0.0,,0.0
+2022,870443,"Goods vehicles >20t, diesel hybrid",hybrid-commercial,pool,0.0,0.0,0.0,0.0,,0.0
+2022,870451,Hybrid utes/vans <=5t,hybrid-commercial,pool,0.0,138256.21,0.0,16.0,,2.9e-05
+2022,870452,"Goods vehicles 5-20t, spark-ignition hybrid",hybrid-commercial,pool,0.0,0.0,0.0,0.0,,0.0
+2022,870453,"Goods vehicles >20t, spark-ignition hybrid",hybrid-commercial,pool,0.0,0.0,0.0,0.0,,0.0
+2022,870460,"Goods vehicles, electric motor only (electric trucks/vans)",truck,pool,3414212.0,7547096.67,240.086,98.0,2.2105,0.0098
+2022,870470,"Goods vehicles, other/unspecified propulsion",truck,context,0.0,0.0,0.0,0.0,,0.0
+2022,870121,"Road tractors, compression-ignition only (reference)",prime-mover,context,2559547.0,1012718.33,335.6,37.0,0.3957,0.0
+2022,870122,"Road tractors, diesel hybrid",prime-mover,pool,0.0,0.0,0.0,0.0,,0.0
+2022,870123,"Road tractors, spark-ignition hybrid",prime-mover,pool,0.0,0.0,0.0,0.0,,0.0
+2022,870124,"Road tractors, electric motor only (electric prime movers)",prime-mover,pool,0.0,0.0,0.0,0.0,,0.0
+2022,870129,"Road tractors, other/unspecified",prime-mover,context,0.0,0.0,0.0,0.0,,0.0
+2022,870911,"Self-propelled works trucks, electric (no lifting equipment)",forklift-industrial,pool,3186633.0,1558966.72,388.643,1770.0,0.4892,0.02478
+2022,842710,Electric forklifts,forklift-industrial,pool,129055981.0,83049983.8,24732.69,17991.0,0.6435,0.259071
+2022,871160,"E-bikes, e-scooters, e-motorcycles",e-mobility,pool,165935597.0,180059892.76,7739.222,375896.0,1.0851,0.375896
+2022,870410,Dumpers for off-highway use (mining trucks — unsplit by propulsion),mining-tripwire,tripwire,371678.0,313117.03,34.472,35.0,0.8424,0.0
+2022,850440,Static converters (inverters/PCS),swap-signature,signature,565414525.0,683024555.64,19520.075,25942155.0,1.208,0.0
+2022,853710,Control boards/cabinets <=1000V,swap-signature,signature,123651795.0,175028067.94,3835.984,3835984.0,1.4155,0.0
+2022,850710,"Lead-acid accumulators, starter batteries",3c-reference,context,23201881.0,38880747.94,8411.1,554317.0,1.6758,0.0
+2022,850720,Lead-acid accumulators (non-starter),3c-reference,context,121989657.0,109133863.52,29922.472,1993870.0,0.8946,0.0
+2022,850730,Nickel-cadmium accumulators,3c-reference,context,2368898.0,2874269.27,115.171,113395.0,1.2133,0.0
+2022,850740,Nickel-iron accumulators,3c-reference,context,0.0,0.0,0.0,0.0,,0.0
+2022,850750,Nickel-metal hydride accumulators,3c-reference,context,5098119.0,6562754.67,261.631,2077640.0,1.2873,0.0
+2022,850780,"Other accumulators (excl. Li-ion, lead-acid, NiCd, NiFe, NiMH)",3c-reference,context,3508880.0,5695723.25,413.069,21950.0,1.6232,0.0
+2022,850610,"Primary cells/batteries, manganese dioxide (alkaline)",3c-reference,context,33337571.0,51071211.35,6332.156,297765609.0,1.5319,0.0
+2022,850650,"Primary cells/batteries, lithium",3c-reference,context,4410306.0,13046370.86,87.978,8973525.0,2.9582,0.0
+2022,850660,"Primary cells/batteries, silver oxide / air-zinc class",3c-reference,context,157738.0,434951.82,1.15,841296.0,2.7574,0.0
+2022,854910,"Waste/scrap of primary cells, batteries and accumulators (unsorted class)",waste-watch,waste,0.0,0.0,0.0,0.0,,0.0
+2022,854911,Waste/scrap of primary cells/batteries containing mercury/cadmium/lead class,waste-watch,waste,0.0,0.0,0.0,0.0,,0.0
+2022,854912,"Waste/scrap of batteries, sorted by chemical type",waste-watch,waste,0.0,0.0,0.0,0.0,,0.0
+2022,854913,"Waste/scrap of batteries, unsorted/mixed",waste-watch,waste,0.0,0.0,0.0,0.0,,0.0
+2022,854914,"Waste/scrap of batteries, other",waste-watch,waste,0.0,0.0,0.0,0.0,,0.0
+2022,854919,"Waste/scrap of batteries, other (residual)",waste-watch,waste,0.0,0.0,0.0,0.0,,0.0
+2023,850760,"Li-ion accumulators (packs, all formats)",mixed-large-format,pool,723801227.0,829267081.5,31035.584,7997285.0,1.1457,3.879448
+2023,870380,Passenger battery-electric vehicles (BEV),passenger-ev,pool,2345074974.0,2711116906.73,161499.33,86437.0,1.1561,5.18622
+2023,870340,Passenger hybrids (HEV),passenger-hybrid,pool,154465760.0,180639505.67,16232.56,9602.0,1.1694,0.014403
+2023,870350,Passenger diesel hybrids (HEV),passenger-hybrid,pool,0.0,0.0,0.0,0.0,,0.0
+2023,870360,Passenger plug-in hybrids (PHEV),passenger-phev,pool,56693177.0,51582368.84,3692.266,1872.0,0.9099,0.033696
+2023,870370,Passenger diesel plug-in hybrids (PHEV),passenger-phev,pool,0.0,0.0,0.0,0.0,,0.0
+2023,870240,"Buses/coaches (>10 seats), electric motor only",bus,pool,15113931.0,16251854.38,674.195,78.0,1.0753,0.0234
+2023,870441,"Goods vehicles <=5t, diesel hybrid",hybrid-commercial,pool,0.0,0.0,0.0,0.0,,0.0
+2023,870442,"Goods vehicles 5-20t, diesel hybrid",hybrid-commercial,pool,0.0,0.0,0.0,0.0,,0.0
+2023,870443,"Goods vehicles >20t, diesel hybrid",hybrid-commercial,pool,0.0,0.0,0.0,0.0,,0.0
+2023,870451,Hybrid utes/vans <=5t,hybrid-commercial,pool,172721.0,139135.17,15.33,6.0,0.8055,1.1e-05
+2023,870452,"Goods vehicles 5-20t, spark-ignition hybrid",hybrid-commercial,pool,0.0,0.0,0.0,0.0,,0.0
+2023,870453,"Goods vehicles >20t, spark-ignition hybrid",hybrid-commercial,pool,0.0,0.0,0.0,0.0,,0.0
+2023,870460,"Goods vehicles, electric motor only (electric trucks/vans)",truck,pool,21424652.0,22511217.18,1427.35,547.0,1.0507,0.0547
+2023,870470,"Goods vehicles, other/unspecified propulsion",truck,context,0.0,0.0,0.0,0.0,,0.0
+2023,870121,"Road tractors, compression-ignition only (reference)",prime-mover,context,8737292.0,11577076.18,1179.5,129.0,1.325,0.0
+2023,870122,"Road tractors, diesel hybrid",prime-mover,pool,0.0,0.0,0.0,0.0,,0.0
+2023,870123,"Road tractors, spark-ignition hybrid",prime-mover,pool,0.0,0.0,0.0,0.0,,0.0
+2023,870124,"Road tractors, electric motor only (electric prime movers)",prime-mover,pool,340000.0,347382.01,10.9,1.0,1.0217,0.00035
+2023,870129,"Road tractors, other/unspecified",prime-mover,context,0.0,0.0,0.0,0.0,,0.0
+2023,870911,"Self-propelled works trucks, electric (no lifting equipment)",forklift-industrial,pool,3241355.0,1460617.9,410.76,923.0,0.4506,0.012922
+2023,842710,Electric forklifts,forklift-industrial,pool,150047302.0,94086848.38,29318.676,16757.0,0.627,0.241301
+2023,871160,"E-bikes, e-scooters, e-motorcycles",e-mobility,pool,110159908.0,108939822.66,5540.744,264009.0,0.9889,0.264009
+2023,870410,Dumpers for off-highway use (mining trucks — unsplit by propulsion),mining-tripwire,tripwire,9947313.0,9684343.71,1125.826,81.0,0.9736,0.0
+2023,850440,Static converters (inverters/PCS),swap-signature,signature,635002689.0,698106703.99,21441.824,27794270.0,1.0994,0.0
+2023,853710,Control boards/cabinets <=1000V,swap-signature,signature,149278082.0,182933877.34,4841.943,4841943.0,1.2255,0.0
+2023,850710,"Lead-acid accumulators, starter batteries",3c-reference,context,22144446.0,33281594.38,8192.971,603183.0,1.5029,0.0
+2023,850720,Lead-acid accumulators (non-starter),3c-reference,context,79699888.0,81009467.29,25082.677,1767084.0,1.0164,0.0
+2023,850730,Nickel-cadmium accumulators,3c-reference,context,1171406.0,2104763.27,47.841,92313.0,1.7968,0.0
+2023,850740,Nickel-iron accumulators,3c-reference,context,0.0,0.0,0.0,0.0,,0.0
+2023,850750,Nickel-metal hydride accumulators,3c-reference,context,2905496.0,5085870.33,89.593,2091909.0,1.7504,0.0
+2023,850780,"Other accumulators (excl. Li-ion, lead-acid, NiCd, NiFe, NiMH)",3c-reference,context,4940714.0,9776704.13,606.324,2066.0,1.9788,0.0
+2023,850610,"Primary cells/batteries, manganese dioxide (alkaline)",3c-reference,context,28598605.0,44624700.9,5254.767,255576746.0,1.5604,0.0
+2023,850650,"Primary cells/batteries, lithium",3c-reference,context,2523755.0,9611791.77,61.204,6577214.0,3.8085,0.0
+2023,850660,"Primary cells/batteries, silver oxide / air-zinc class",3c-reference,context,212950.0,432271.81,0.89,1151100.0,2.0299,0.0
+2023,854910,"Waste/scrap of primary cells, batteries and accumulators (unsorted class)",waste-watch,waste,0.0,0.0,0.0,0.0,,0.0
+2023,854911,Waste/scrap of primary cells/batteries containing mercury/cadmium/lead class,waste-watch,waste,0.0,0.0,0.0,0.0,,0.0
+2023,854912,"Waste/scrap of batteries, sorted by chemical type",waste-watch,waste,0.0,0.0,0.0,0.0,,0.0
+2023,854913,"Waste/scrap of batteries, unsorted/mixed",waste-watch,waste,0.0,0.0,0.0,0.0,,0.0
+2023,854914,"Waste/scrap of batteries, other",waste-watch,waste,0.0,0.0,0.0,0.0,,0.0
+2023,854919,"Waste/scrap of batteries, other (residual)",waste-watch,waste,0.0,0.0,0.0,0.0,,0.0
+2024,850760,"Li-ion accumulators (packs, all formats)",mixed-large-format,pool,1456510643.0,1655860874.64,82656.59,11165783.0,1.1369,10.332074
+2024,870380,Passenger battery-electric vehicles (BEV),passenger-ev,pool,1729435809.0,2215927087.37,121237.87,64619.0,1.2813,3.87714
+2024,870340,Passenger hybrids (HEV),passenger-hybrid,pool,236770602.0,331080637.61,23667.348,13363.0,1.3983,0.020044
+2024,870350,Passenger diesel hybrids (HEV),passenger-hybrid,pool,0.0,0.0,0.0,0.0,,0.0
+2024,870360,Passenger plug-in hybrids (PHEV),passenger-phev,pool,187680274.0,187018116.53,16256.597,7936.0,0.9965,0.142848
+2024,870370,Passenger diesel plug-in hybrids (PHEV),passenger-phev,pool,0.0,0.0,0.0,0.0,,0.0
+2024,870240,"Buses/coaches (>10 seats), electric motor only",bus,pool,35384375.0,35281699.24,1579.535,144.0,0.9971,0.0432
+2024,870441,"Goods vehicles <=5t, diesel hybrid",hybrid-commercial,pool,0.0,0.0,0.0,0.0,,0.0
+2024,870442,"Goods vehicles 5-20t, diesel hybrid",hybrid-commercial,pool,0.0,0.0,0.0,0.0,,0.0
+2024,870443,"Goods vehicles >20t, diesel hybrid",hybrid-commercial,pool,0.0,0.0,0.0,0.0,,0.0
+2024,870451,Hybrid utes/vans <=5t,hybrid-commercial,pool,55375373.0,21000957.5,5863.895,2221.0,0.3792,0.003998
+2024,870452,"Goods vehicles 5-20t, spark-ignition hybrid",hybrid-commercial,pool,0.0,0.0,0.0,0.0,,0.0
+2024,870453,"Goods vehicles >20t, spark-ignition hybrid",hybrid-commercial,pool,0.0,0.0,0.0,0.0,,0.0
+2024,870460,"Goods vehicles, electric motor only (electric trucks/vans)",truck,pool,9953241.0,19946029.1,725.625,293.0,2.004,0.0293
+2024,870470,"Goods vehicles, other/unspecified propulsion",truck,context,0.0,0.0,0.0,0.0,,0.0
+2024,870121,"Road tractors, compression-ignition only (reference)",prime-mover,context,15319466.0,19974134.12,2048.3,228.0,1.3038,0.0
+2024,870122,"Road tractors, diesel hybrid",prime-mover,pool,0.0,0.0,0.0,0.0,,0.0
+2024,870123,"Road tractors, spark-ignition hybrid",prime-mover,pool,0.0,0.0,0.0,0.0,,0.0
+2024,870124,"Road tractors, electric motor only (electric prime movers)",prime-mover,pool,0.0,0.0,0.0,0.0,,0.0
+2024,870129,"Road tractors, other/unspecified",prime-mover,context,0.0,0.0,0.0,0.0,,0.0
+2024,870911,"Self-propelled works trucks, electric (no lifting equipment)",forklift-industrial,pool,3361709.0,2515595.4,441.912,1215.0,0.7483,0.01701
+2024,842710,Electric forklifts,forklift-industrial,pool,152912879.0,112108740.9,29661.523,19626.0,0.7332,0.282614
+2024,871160,"E-bikes, e-scooters, e-motorcycles",e-mobility,pool,116736308.0,121188688.04,6833.286,324751.0,1.0381,0.324751
+2024,870410,Dumpers for off-highway use (mining trucks — unsplit by propulsion),mining-tripwire,tripwire,6043117.0,6126327.65,838.013,69.0,1.0138,0.0
+2024,850440,Static converters (inverters/PCS),swap-signature,signature,560693966.0,692850255.83,20225.153,22013808.0,1.2357,0.0
+2024,853710,Control boards/cabinets <=1000V,swap-signature,signature,163723478.0,216889186.97,5775.291,5775291.0,1.3247,0.0
+2024,850710,"Lead-acid accumulators, starter batteries",3c-reference,context,29343362.0,48744633.42,11175.34,837678.0,1.6612,0.0
+2024,850720,Lead-acid accumulators (non-starter),3c-reference,context,74674985.0,90547123.79,27414.87,1961653.0,1.2125,0.0
+2024,850730,Nickel-cadmium accumulators,3c-reference,context,428196.0,798874.69,16.877,77053.0,1.8657,0.0
+2024,850740,Nickel-iron accumulators,3c-reference,context,0.0,0.0,0.0,0.0,,0.0
+2024,850750,Nickel-metal hydride accumulators,3c-reference,context,3019554.0,4591755.19,114.637,2445467.0,1.5207,0.0
+2024,850780,"Other accumulators (excl. Li-ion, lead-acid, NiCd, NiFe, NiMH)",3c-reference,context,62350.0,3265711.23,7.158,3527.0,52.3771,0.0
+2024,850610,"Primary cells/batteries, manganese dioxide (alkaline)",3c-reference,context,34202276.0,49705258.08,6518.856,316651178.0,1.4533,0.0
+2024,850650,"Primary cells/batteries, lithium",3c-reference,context,2952901.0,9131524.87,72.599,10028362.0,3.0924,0.0
+2024,850660,"Primary cells/batteries, silver oxide / air-zinc class",3c-reference,context,233475.0,319255.35,1.356,1190409.0,1.3674,0.0
+2024,854910,"Waste/scrap of primary cells, batteries and accumulators (unsorted class)",waste-watch,waste,0.0,0.0,0.0,0.0,,0.0
+2024,854911,Waste/scrap of primary cells/batteries containing mercury/cadmium/lead class,waste-watch,waste,0.0,0.0,0.0,0.0,,0.0
+2024,854912,"Waste/scrap of batteries, sorted by chemical type",waste-watch,waste,0.0,0.0,0.0,0.0,,0.0
+2024,854913,"Waste/scrap of batteries, unsorted/mixed",waste-watch,waste,0.0,0.0,0.0,0.0,,0.0
+2024,854914,"Waste/scrap of batteries, other",waste-watch,waste,0.0,0.0,0.0,0.0,,0.0
+2024,854919,"Waste/scrap of batteries, other (residual)",waste-watch,waste,0.0,0.0,0.0,0.0,,0.0
+2025,850760,"Li-ion accumulators (packs, all formats)",mixed-large-format,pool,3406752671.0,4082039987.41,249640.174,12948032.0,1.1982,31.205022
+2025,870380,Passenger battery-electric vehicles (BEV),passenger-ev,pool,2293265929.0,2550681387.17,177400.146,89600.0,1.1122,5.376
+2025,870340,Passenger hybrids (HEV),passenger-hybrid,pool,310988910.0,447995061.37,33152.689,20612.0,1.4405,0.030918
+2025,870350,Passenger diesel hybrids (HEV),passenger-hybrid,pool,0.0,12662750.86,0.0,641.0,,0.000962
+2025,870360,Passenger plug-in hybrids (PHEV),passenger-phev,pool,665473021.0,588980408.13,63895.984,31664.0,0.8851,0.569952
+2025,870370,Passenger diesel plug-in hybrids (PHEV),passenger-phev,pool,0.0,1344.63,0.0,1.0,,1.8e-05
+2025,870240,"Buses/coaches (>10 seats), electric motor only",bus,pool,52098463.0,56476338.06,2225.521,169.0,1.084,0.0507
+2025,870441,"Goods vehicles <=5t, diesel hybrid",hybrid-commercial,pool,0.0,0.0,0.0,0.0,,0.0
+2025,870442,"Goods vehicles 5-20t, diesel hybrid",hybrid-commercial,pool,0.0,0.0,0.0,0.0,,0.0
+2025,870443,"Goods vehicles >20t, diesel hybrid",hybrid-commercial,pool,0.0,0.0,0.0,0.0,,0.0
+2025,870451,Hybrid utes/vans <=5t,hybrid-commercial,pool,551965329.0,652848433.43,62132.89,22934.0,1.1828,0.041281
+2025,870452,"Goods vehicles 5-20t, spark-ignition hybrid",hybrid-commercial,pool,0.0,0.0,0.0,0.0,,0.0
+2025,870453,"Goods vehicles >20t, spark-ignition hybrid",hybrid-commercial,pool,0.0,0.0,0.0,0.0,,0.0
+2025,870460,"Goods vehicles, electric motor only (electric trucks/vans)",truck,pool,10765885.0,28046064.59,771.685,303.0,2.6051,0.0303
+2025,870470,"Goods vehicles, other/unspecified propulsion",truck,context,0.0,0.0,0.0,0.0,,0.0
+2025,870121,"Road tractors, compression-ignition only (reference)",prime-mover,context,18677797.0,17789771.99,2439.03,278.0,0.9525,0.0
+2025,870122,"Road tractors, diesel hybrid",prime-mover,pool,0.0,0.0,0.0,0.0,,0.0
+2025,870123,"Road tractors, spark-ignition hybrid",prime-mover,pool,0.0,0.0,0.0,0.0,,0.0
+2025,870124,"Road tractors, electric motor only (electric prime movers)",prime-mover,pool,1725798.0,1252025.7,49.04,4.0,0.7255,0.0014
+2025,870129,"Road tractors, other/unspecified",prime-mover,context,505994.0,516703.66,25.1,2.0,1.0212,0.0
+2025,870911,"Self-propelled works trucks, electric (no lifting equipment)",forklift-industrial,pool,7169377.0,2999126.34,706.521,1565.0,0.4183,0.02191
+2025,842710,Electric forklifts,forklift-industrial,pool,163309406.0,128480821.28,32500.502,22229.0,0.7867,0.320098
+2025,871160,"E-bikes, e-scooters, e-motorcycles",e-mobility,pool,166906288.0,164063608.78,9505.929,399162.0,0.983,0.399162
+2025,870410,Dumpers for off-highway use (mining trucks — unsplit by propulsion),mining-tripwire,tripwire,5175582.0,5062677.25,559.595,54.0,0.9782,0.0
+2025,850440,Static converters (inverters/PCS),swap-signature,signature,775773155.0,928839891.35,27263.482,20105215.0,1.1973,0.0
+2025,853710,Control boards/cabinets <=1000V,swap-signature,signature,232703922.0,290616170.76,9171.191,9171191.0,1.2489,0.0
+2025,850710,"Lead-acid accumulators, starter batteries",3c-reference,context,31265028.0,57665753.26,11997.541,922832.0,1.8444,0.0
+2025,850720,Lead-acid accumulators (non-starter),3c-reference,context,60750473.0,82337954.98,24074.993,1754440.0,1.3553,0.0
+2025,850730,Nickel-cadmium accumulators,3c-reference,context,245510.0,505053.25,8.461,39906.0,2.0572,0.0
+2025,850740,Nickel-iron accumulators,3c-reference,context,0.0,0.0,0.0,0.0,,0.0
+2025,850750,Nickel-metal hydride accumulators,3c-reference,context,3306455.0,5475317.84,115.214,2682231.0,1.6559,0.0
+2025,850780,"Other accumulators (excl. Li-ion, lead-acid, NiCd, NiFe, NiMH)",3c-reference,context,204967.0,7634928.83,24.429,1982.0,37.2496,0.0
+2025,850610,"Primary cells/batteries, manganese dioxide (alkaline)",3c-reference,context,33016168.0,45531912.41,6497.607,318463995.0,1.3791,0.0
+2025,850650,"Primary cells/batteries, lithium",3c-reference,context,3224879.0,11838511.24,103.673,10505856.0,3.671,0.0
+2025,850660,"Primary cells/batteries, silver oxide / air-zinc class",3c-reference,context,211729.0,420928.1,0.931,1371967.0,1.9881,0.0
+2025,854910,"Waste/scrap of primary cells, batteries and accumulators (unsorted class)",waste-watch,waste,0.0,0.0,0.0,0.0,,0.0
+2025,854911,Waste/scrap of primary cells/batteries containing mercury/cadmium/lead class,waste-watch,waste,0.0,0.0,0.0,0.0,,0.0
+2025,854912,"Waste/scrap of batteries, sorted by chemical type",waste-watch,waste,0.0,0.0,0.0,0.0,,0.0
+2025,854913,"Waste/scrap of batteries, unsorted/mixed",waste-watch,waste,0.0,0.0,0.0,0.0,,0.0
+2025,854914,"Waste/scrap of batteries, other",waste-watch,waste,0.0,0.0,0.0,0.0,,0.0
+2025,854919,"Waste/scrap of batteries, other (residual)",waste-watch,waste,0.0,0.0,0.0,0.0,,0.0
